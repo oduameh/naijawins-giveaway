@@ -11,16 +11,8 @@
     // ============================================
     
     const CONFIG = {
-        // Form submission endpoint - Choose one:
-        
-        // Option 1: Formspree (Easy setup - create account at formspree.io)
-        formEndpoint: 'https://formspree.io/f/YOUR_FORM_ID',
-        
-        // Option 2: Google Sheets via Apps Script (See README for setup)
-        // formEndpoint: 'https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec',
-        
-        // Option 3: Your own backend API
-        // formEndpoint: 'https://api.yourdomain.com/subscribe',
+        // Google Sheets via Apps Script
+        formEndpoint: 'https://script.google.com/macros/s/AKfycbyMrZJzxW0ipDIHEqa8YgVoH2mdZfkY9UEuoTKNP6AN5-oto77_mmdZefMq72qUCQTrlQ/exec',
         
         // Redirect after successful submission
         successRedirect: 'success.html',
