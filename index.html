@@ -3,131 +3,632 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Win ₦100,000 Cash! Enter our free giveaway today. No purchase necessary. Open to Nigerian residents.">
-    <meta name="keywords" content="giveaway, cash prize, Nigeria, free money, contest">
+    <meta name="description" content="Win ₦100,000 Cash! Enter our free weekly giveaway. No purchase necessary. Open to all Nigerians.">
     
-    <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Win ₦100,000 Cash Giveaway - Enter Free Today!">
-    <meta property="og:description" content="Enter now for a chance to win ₦100,000 cash! No purchase necessary. Winners announced weekly.">
-    <meta property="og:image" content="https://naijawins.digital/images/og-image.jpg">
+    <meta property="og:title" content="Win ₦100,000 Cash - Free Weekly Giveaway">
+    <meta property="og:description" content="Enter now for a chance to win ₦100,000 cash! Winners announced every Sunday.">
     <meta property="og:url" content="https://naijawins.digital">
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Win ₦100,000 Cash Giveaway">
-    <meta name="twitter:description" content="Enter now for a chance to win ₦100,000 cash! No purchase necessary.">
-    <meta name="twitter:image" content="https://naijawins.digital/images/twitter-card.jpg">
-    
-    <title>Win ₦100,000 Cash Giveaway | Enter Free Today</title>
+    <title>Win ₦100,000 Cash | Free Weekly Giveaway for Nigerians</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <!-- Google AdSense Script -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3212022468120924"
      crossorigin="anonymous"></script>
+    
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --green: #059669;
+            --green-dark: #047857;
+            --green-light: #10B981;
+            --orange: #F97316;
+            --orange-dark: #EA580C;
+            --dark: #111827;
+            --gray: #6B7280;
+            --light-gray: #F3F4F6;
+            --white: #FFFFFF;
+        }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Header */
+        .header {
+            background: var(--white);
+            border-bottom: 1px solid var(--light-gray);
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--green);
+            text-decoration: none;
+        }
+        
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a {
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .nav-links a:hover { color: var(--dark); }
+        
+        /* Hero */
+        .hero {
+            background: linear-gradient(180deg, #ECFDF5 0%, #FFFFFF 100%);
+            padding: 48px 0 32px;
+            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--green);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 6px 16px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            color: var(--dark);
+        }
+        
+        .hero h1 span {
+            color: var(--green);
+        }
+        
+        @media (min-width: 640px) {
+            .hero h1 { font-size: 3.5rem; }
+        }
+        
+        .hero-text {
+            font-size: 1.125rem;
+            color: var(--gray);
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .prize-box {
+            background: var(--dark);
+            color: white;
+            padding: 24px 32px;
+            border-radius: 16px;
+            display: inline-block;
+            margin-bottom: 32px;
+        }
+        
+        .prize-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            margin-bottom: 4px;
+        }
+        
+        .prize-amount {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--green-light);
+        }
+        
+        .stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+        
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--gray);
+            text-transform: uppercase;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--orange);
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 700;
+            padding: 16px 48px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
+            transition: all 0.2s;
+        }
+        
+        .cta-button:hover {
+            background: var(--orange-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(249, 115, 22, 0.5);
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 48px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .section-dark {
+            background: var(--dark);
+            color: white;
+            border: none;
+        }
+        
+        .section h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 32px;
+        }
+        
+        .section-dark .section-subtitle {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* How It Works */
+        .steps {
+            display: grid;
+            gap: 24px;
+        }
+        
+        @media (min-width: 640px) {
+            .steps { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        .step {
+            text-align: center;
+            padding: 24px;
+            background: var(--light-gray);
+            border-radius: 12px;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--green);
+            color: white;
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+        
+        .step h3 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .step p {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+        
+        /* Entry Form */
+        .entry-section {
+            background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
+            padding: 64px 0;
+        }
+        
+        .entry-card {
+            background: white;
+            border: 2px solid var(--light-gray);
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        
+        .entry-card h2 {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        
+        .entry-card > p {
+            text-align: center;
+            color: var(--gray);
+            margin-bottom: 24px;
+        }
+        
+        .form-group {
+            margin-bottom: 16px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 1rem;
+            border: 2px solid var(--light-gray);
+            border-radius: 8px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--green);
+        }
+        
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+        
+        .checkbox-row input {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            accent-color: var(--green);
+        }
+        
+        .checkbox-row label {
+            font-size: 0.875rem;
+            color: var(--gray);
+        }
+        
+        .checkbox-row a {
+            color: var(--green);
+        }
+        
+        .submit-btn {
+            width: 100%;
+            background: var(--orange);
+            color: white;
+            font-size: 1.125rem;
+            font-weight: 700;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.2s;
+        }
+        
+        .submit-btn:hover {
+            background: var(--orange-dark);
+        }
+        
+        .form-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-top: 16px;
+        }
+        
+        /* Ad Container */
+        .ad-container {
+            padding: 24px 0;
+            background: var(--light-gray);
+        }
+        
+        /* Winners */
+        .winners-grid {
+            display: grid;
+            gap: 16px;
+        }
+        
+        @media (min-width: 640px) {
+            .winners-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        .winner-card {
+            background: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .section-dark .winner-card {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        .winner-avatar {
+            width: 48px;
+            height: 48px;
+            background: var(--green);
+            color: white;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .winner-info h4 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+        }
+        
+        .winner-info p {
+            font-size: 0.8125rem;
+            color: var(--gray);
+        }
+        
+        .section-dark .winner-info p {
+            color: rgba(255,255,255,0.6);
+        }
+        
+        .winner-info .amount {
+            color: var(--green-light);
+            font-weight: 600;
+        }
+        
+        /* FAQ */
+        .faq-list {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid var(--light-gray);
+        }
+        
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        
+        .faq-question svg {
+            flex-shrink: 0;
+            color: var(--gray);
+            transition: transform 0.2s;
+        }
+        
+        .faq-item.open .faq-question svg {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+        }
+        
+        .faq-item.open .faq-answer {
+            max-height: 200px;
+        }
+        
+        .faq-answer p {
+            padding-bottom: 20px;
+            color: var(--gray);
+            font-size: 0.9375rem;
+        }
+        
+        /* Blog Preview */
+        .blog-list {
+            display: grid;
+            gap: 16px;
+        }
+        
+        .blog-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            background: var(--light-gray);
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: background 0.2s;
+        }
+        
+        .blog-item:hover {
+            background: #E5E7EB;
+        }
+        
+        .blog-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--green);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .blog-icon svg {
+            color: white;
+        }
+        
+        .blog-item h3 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        
+        .blog-item p {
+            font-size: 0.8125rem;
+            color: var(--gray);
+        }
+        
+        .view-all {
+            display: block;
+            text-align: center;
+            margin-top: 24px;
+            color: var(--green);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: white;
+            padding: 48px 0 24px;
+        }
+        
+        .footer-content {
+            display: grid;
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        
+        @media (min-width: 640px) {
+            .footer-content { grid-template-columns: 2fr 1fr 1fr; }
+        }
+        
+        .footer-brand p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.875rem;
+            margin-top: 8px;
+        }
+        
+        .footer-links h4 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .footer-links a {
+            display: block;
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-size: 0.875rem;
+            margin-bottom: 8px;
+        }
+        
+        .footer-links a:hover { color: white; }
+        
+        .footer-bottom {
+            padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .footer-disclaimer {
+            margin-top: 12px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 <body>
-    <!-- Decorative Background Elements -->
-    <div class="bg-decoration">
-        <div class="bg-circle bg-circle-1"></div>
-        <div class="bg-circle bg-circle-2"></div>
-        <div class="bg-circle bg-circle-3"></div>
-    </div>
-
-    <!-- Header -->
     <header class="header">
         <div class="container">
-            <a href="/" class="logo">
-                <svg class="logo-icon-svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
-                    <path d="M16 8L20 12H17V20H15V12H12L16 8Z" fill="white"/>
-                    <path d="M10 22H22V24H10V22Z" fill="white"/>
-                    <defs>
-                        <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
-                            <stop offset="0%" stop-color="#1E3A5F"/>
-                            <stop offset="100%" stop-color="#D4AF37"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <span class="logo-text">NaijaWins</span>
-            </a>
+            <a href="/" class="logo">NaijaWins</a>
             <nav class="nav-links">
                 <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
-                <a href="#enter" class="nav-cta">Enter Now</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-content">
-                <div class="badge">
-                    <span class="badge-dot"></span>
-                    <span>Weekly Draw Active</span>
-                </div>
-                <h1 class="hero-title">
-                    Win <span class="highlight">₦100,000</span> Cash Weekly
-                </h1>
-                <p class="hero-subtitle">
-                    Enter our legitimate weekly cash giveaway. No purchase required. 
-                    Winners are selected every Sunday and paid directly via bank transfer.
-                </p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number" id="entries-count">2,847</span>
-                        <span class="stat-label">Entries</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number">₦100K</span>
-                        <span class="stat-label">Prize</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-number" id="countdown-days">5</span>
-                        <span class="stat-label">Days Left</span>
-                    </div>
-                </div>
-                <a href="#enter" class="hero-cta">
-                    <span>Enter Giveaway Free</span>
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </a>
+            <span class="hero-badge">Free Entry • Weekly Draws</span>
+            <h1>Win <span>₦100,000</span> Cash Every Week</h1>
+            <p class="hero-text">Join thousands of Nigerians entering our free weekly giveaway. No purchase needed.</p>
+            
+            <div class="prize-box">
+                <div class="prize-label">This Week's Prize</div>
+                <div class="prize-amount">₦100,000</div>
             </div>
-            <div class="hero-visual">
-                <div class="cash-card">
-                    <div class="cash-card-glow"></div>
-                    <div class="cash-card-inner">
-                        <div class="cash-label-top">WEEKLY PRIZE</div>
-                        <div class="cash-amount">₦100,000</div>
-                        <div class="cash-label">Nigerian Naira</div>
-                    </div>
+            
+            <div class="stats-row">
+                <div class="stat">
+                    <div class="stat-number" id="entries-count">4,892</div>
+                    <div class="stat-label">Entries</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="countdown-days">4</div>
+                    <div class="stat-label">Days Left</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Winners So Far</div>
                 </div>
             </div>
+            
+            <a href="#enter" class="cta-button">Enter Free Now →</a>
         </div>
     </section>
 
-    <!-- Content Section for better SEO -->
-    <section class="content-intro" style="padding: 48px 0; background: #fff; border-bottom: 1px solid #E2E8F0;">
-        <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 style="font-size: 1.5rem; font-weight: 600; color: #1E293B; margin-bottom: 1rem;">Nigeria's Trusted Weekly Cash Giveaway</h2>
-                <p style="color: #64748B; line-height: 1.7; margin-bottom: 1rem;">NaijaWins is a legitimate giveaway platform offering Nigerian residents the opportunity to win ₦100,000 cash every week. Our platform operates with complete transparency, using certified random selection processes to ensure fairness for all participants.</p>
-                <p style="color: #64748B; line-height: 1.7;">Participation is completely free—no purchase required, no fees to claim prizes. Simply register with your email address to enter the weekly draw. Winners are announced every Sunday and receive their funds via direct bank transfer within 24-48 hours.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ad Slot 1 - Banner (Natural placement away from form) -->
-    <div class="ad-container ad-banner">
+    <!-- Ad Slot -->
+    <div class="ad-container">
         <div class="container">
             <ins class="adsbygoogle"
                  style="display:block"
@@ -135,406 +636,272 @@
                  data-ad-slot="9057164066"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
     </div>
 
-    <!-- How It Works Section -->
-    <section class="how-it-works" id="how-it-works">
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">How It Works</h2>
-            <p class="section-subtitle">Three simple steps to enter the giveaway</p>
-            <div class="steps-grid">
-                <div class="step-card">
+            <h2>How It Works</h2>
+            <p class="section-subtitle">Three simple steps to enter</p>
+            <div class="steps">
+                <div class="step">
                     <div class="step-number">1</div>
-                    <div class="step-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                            <polyline points="22,6 12,13 2,6"/>
-                        </svg>
-                    </div>
                     <h3>Enter Your Email</h3>
                     <p>Provide your email address to register for the weekly draw.</p>
                 </div>
-                <div class="step-card">
+                <div class="step">
                     <div class="step-number">2</div>
-                    <div class="step-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                            <polyline points="22,4 12,14.01 9,11.01"/>
-                        </svg>
-                    </div>
                     <h3>Confirm Entry</h3>
-                    <p>Verify your email to complete your registration.</p>
+                    <p>Check your inbox and verify your entry.</p>
                 </div>
-                <div class="step-card">
+                <div class="step">
                     <div class="step-number">3</div>
-                    <div class="step-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-                            <line x1="1" y1="10" x2="23" y2="10"/>
-                        </svg>
-                    </div>
-                    <h3>Receive Payment</h3>
-                    <p>Winners receive cash directly to their Nigerian bank account.</p>
+                    <h3>Win Cash</h3>
+                    <p>Winners get ₦100,000 sent directly to their bank.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Entry Form Section -->
     <section class="entry-section" id="enter">
         <div class="container">
             <div class="entry-card">
-                <div class="entry-header">
-                    <h2>Enter to Win ₦100,000</h2>
-                    <p>Fill in your details below to enter the giveaway</p>
-                </div>
-                <form id="giveaway-form" class="entry-form">
+                <h2>Enter to Win ₦100,000</h2>
+                <p>Fill in your details below to enter this week's draw</p>
+                
+                <form id="giveaway-form">
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <div class="input-wrapper">
-                            <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                            <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
-                        </div>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
                     </div>
                     <div class="form-group">
                         <label for="name">Full Name (Optional)</label>
-                        <div class="input-wrapper">
-                            <svg class="input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
-                                <circle cx="12" cy="7" r="4"/>
-                            </svg>
-                            <input type="text" id="name" name="name" placeholder="Your full name">
-                        </div>
+                        <input type="text" id="name" name="name" placeholder="Your name">
                     </div>
-                    <div class="checkbox-group">
+                    <div class="checkbox-row">
                         <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">
-                            I agree to the <a href="terms.html" target="_blank">Terms and Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>
-                        </label>
+                        <label for="terms">I agree to the <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a></label>
                     </div>
-                    <div class="checkbox-group">
+                    <div class="checkbox-row">
                         <input type="checkbox" id="newsletter" name="newsletter" checked>
-                        <label for="newsletter">
-                            Send me updates about future giveaways and promotions
-                        </label>
+                        <label for="newsletter">Send me updates about future giveaways</label>
                     </div>
-                    <button type="submit" class="submit-btn" id="submit-btn">
-                        <span class="btn-text">Enter Giveaway</span>
-                        <span class="btn-loading">
-                            <svg class="spinner" viewBox="0 0 24 24">
-                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="30 60"/>
-                            </svg>
-                        </span>
-                    </button>
+                    <button type="submit" class="submit-btn" id="submit-btn">Enter Giveaway</button>
                 </form>
-                <div class="entry-footer">
-                    <p class="disclaimer">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline; vertical-align: middle; margin-right: 4px;">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-                        </svg>
-                        Your information is secure and will never be shared.
-                    </p>
-                </div>
+                <p class="form-note">Your information is secure and will never be shared.</p>
             </div>
         </div>
     </section>
 
-    <!-- Trust Signals Section -->
-    <section class="trust-section">
+    <section class="section section-dark">
         <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M12 6v6l4 2"/>
-                        </svg>
-                    </div>
-                    <h4>No Cost to Enter</h4>
-                    <p>100% free participation</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                    </div>
-                    <h4>Data Protected</h4>
-                    <p>Your privacy is secured</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                        </svg>
-                    </div>
-                    <h4>Weekly Draws</h4>
-                    <p>Every Sunday at 6PM WAT</p>
-                </div>
-                <div class="trust-item">
-                    <div class="trust-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-                            <line x1="1" y1="10" x2="23" y2="10"/>
-                        </svg>
-                    </div>
-                    <h4>Bank Transfer</h4>
-                    <p>Direct payment to winners</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ad Slot 2 - In-Content Ad -->
-    <div class="ad-container ad-in-content">
-        <div class="container">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-3212022468120924"
-                 data-ad-slot="9057164066"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
-        </div>
-    </div>
-
-    <!-- Winners Section -->
-    <section class="winners-section">
-        <div class="container">
-            <h2 class="section-title">Recent Winners</h2>
-            <p class="section-subtitle">Real people winning real cash every week</p>
+            <h2>Recent Winners</h2>
+            <p class="section-subtitle">Real people winning real cash</p>
             <div class="winners-grid">
                 <div class="winner-card">
                     <div class="winner-avatar">C</div>
                     <div class="winner-info">
                         <h4>Chioma A.</h4>
-                        <p>Lagos, Nigeria</p>
-                        <span class="winner-amount">Won ₦100,000</span>
+                        <p>Lagos</p>
+                        <span class="amount">Won ₦100,000</span>
                     </div>
                 </div>
                 <div class="winner-card">
                     <div class="winner-avatar">E</div>
                     <div class="winner-info">
                         <h4>Emmanuel O.</h4>
-                        <p>Abuja, Nigeria</p>
-                        <span class="winner-amount">Won ₦100,000</span>
+                        <p>Abuja</p>
+                        <span class="amount">Won ₦100,000</span>
                     </div>
                 </div>
                 <div class="winner-card">
                     <div class="winner-avatar">F</div>
                     <div class="winner-info">
                         <h4>Fatima B.</h4>
-                        <p>Kano, Nigeria</p>
-                        <span class="winner-amount">Won ₦100,000</span>
+                        <p>Kano</p>
+                        <span class="amount">Won ₦100,000</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section" id="faq">
+    <!-- Ad Slot -->
+    <div class="ad-container">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3212022468120924"
+                 data-ad-slot="9057164066"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Is this giveaway really free?</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
+                        <span>Is this really free?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Yes! This giveaway is 100% free to enter. No purchase is necessary, and you will never be asked to pay anything to participate or claim a prize.</p>
+                        <p>Yes! Entry is 100% free. No purchase or payment is ever required to enter or claim prizes.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
                         <span>How are winners selected?</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Winners are selected randomly using a certified random number generator. Every valid entry has an equal chance of winning.</p>
+                        <p>Winners are selected randomly using a certified random number generator. Every entry has an equal chance.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>How will I receive my prize?</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
+                        <span>How do I receive my prize?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>Winners are notified via email. You will be asked to provide your Nigerian bank account details, and the prize will be transferred directly within 24-48 hours.</p>
+                        <p>Winners are notified by email and receive payment directly to their Nigerian bank account within 24-48 hours.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question">
-                        <span>Who is eligible to enter?</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
+                        <span>Who can enter?</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
                     </button>
                     <div class="faq-answer">
-                        <p>The giveaway is open to residents of Nigeria who are 18 years or older. One entry per person is allowed.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Is this sponsored by social media platforms?</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M6 9l6 6 6-6"/>
-                        </svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No. This promotion is not sponsored, endorsed, administered by, or associated with Facebook, Instagram, TikTok, X (Twitter), Google, or any other platform.</p>
+                        <p>The giveaway is open to Nigerian residents aged 18 and above with a valid bank account.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <section class="section" style="background: #F9FAFB;">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="/" class="logo">
-                        <svg class="logo-icon-svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
-                            <rect width="32" height="32" rx="8" fill="url(#logo-gradient-footer)"/>
-                            <path d="M16 8L20 12H17V20H15V12H12L16 8Z" fill="white"/>
-                            <path d="M10 22H22V24H10V22Z" fill="white"/>
-                            <defs>
-                                <linearGradient id="logo-gradient-footer" x1="0" y1="0" x2="32" y2="32">
-                                    <stop offset="0%" stop-color="#D4AF37"/>
-                                    <stop offset="100%" stop-color="#E8C547"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                        <span class="logo-text">NaijaWins</span>
-                    </a>
-                    <p>Nigeria's legitimate weekly cash giveaway platform.</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Pages</h4>
-                        <a href="about.html">About Us</a>
-                        <a href="blog.html">Blog</a>
-                        <a href="contact.html">Contact</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Legal</h4>
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms & Conditions</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 NaijaWins. All rights reserved.</p>
-                <p class="footer-disclaimer">
-                    This promotion is in no way sponsored, endorsed or administered by, or associated with Facebook, Instagram, TikTok, X (Twitter), or Google. 
-                    No purchase necessary. Must be 18+ and a resident of Nigeria to enter. See <a href="terms.html">Terms</a> for details.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Why Enter Section - More Content for AdSense -->
-    <section class="why-enter-section" style="padding: 60px 0; background: #F1F5F9;">
-        <div class="container">
-            <h2 style="font-size: 1.875rem; font-weight: 700; text-align: center; color: #1E293B; margin-bottom: 0.5rem;">Why Choose NaijaWins?</h2>
-            <p style="text-align: center; color: #64748B; margin-bottom: 2rem;">A transparent and legitimate giveaway platform</p>
-            
-            <div style="display: grid; gap: 1.5rem; max-width: 900px; margin: 0 auto;">
-                <div style="background: #fff; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #1E3A5F;">
-                    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1E293B; margin-bottom: 0.5rem;">Completely Free to Enter</h3>
-                    <p style="color: #64748B; line-height: 1.7; margin: 0;">Unlike many online giveaways that require you to pay "processing fees" or "registration costs," NaijaWins is 100% free. You will never be asked to pay anything to enter or claim your prize. Our giveaway is funded through advertising, allowing us to offer real cash prizes at no cost to participants.</p>
-                </div>
-                
-                <div style="background: #fff; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #D4AF37;">
-                    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1E293B; margin-bottom: 0.5rem;">Fair and Transparent Selection</h3>
-                    <p style="color: #64748B; line-height: 1.7; margin: 0;">Every entry has an equal chance of winning. We use certified random number generators to select winners, ensuring the process is completely fair. Winners are announced every Sunday at 6:00 PM WAT, and we publish winner announcements on our website.</p>
-                </div>
-                
-                <div style="background: #fff; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #1E3A5F;">
-                    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1E293B; margin-bottom: 0.5rem;">Direct Bank Transfer Payment</h3>
-                    <p style="color: #64748B; line-height: 1.7; margin: 0;">Winners receive their ₦100,000 prize directly to their Nigerian bank account within 24-48 hours of verification. No gift cards, no vouchers, no complicated redemption processes – just real cash sent straight to your bank.</p>
-                </div>
-                
-                <div style="background: #fff; border-radius: 0.75rem; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.08); border-left: 4px solid #D4AF37;">
-                    <h3 style="font-size: 1.125rem; font-weight: 600; color: #1E293B; margin-bottom: 0.5rem;">Your Privacy is Protected</h3>
-                    <p style="color: #64748B; line-height: 1.7; margin: 0;">We respect your privacy and only collect the minimum information necessary to run the giveaway. We never sell your data to third parties, and you can unsubscribe from our communications at any time. Read our <a href="privacy.html" style="color: #1E3A5F; font-weight: 500;">Privacy Policy</a> for complete details.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Blog Preview Section -->
-    <section style="padding: 60px 0;">
-        <div class="container">
-            <h2 style="font-size: 1.875rem; font-weight: 700; text-align: center; color: #1E293B; margin-bottom: 0.5rem;">Financial Resources</h2>
-            <p style="text-align: center; color: #64748B; margin-bottom: 2rem;">Helpful articles for Nigerians</p>
-            
-            <div style="display: grid; gap: 1rem; max-width: 900px; margin: 0 auto;">
-                <a href="blog-saving-money-nigeria.html" style="display: flex; gap: 1rem; background: #fff; border-radius: 0.5rem; padding: 1.25rem; text-decoration: none; color: inherit; border: 1px solid #E2E8F0; transition: all 0.25s ease;">
-                    <div style="width: 48px; height: 48px; background: #1E3A5F; border-radius: 0.5rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+            <h2>From Our Blog</h2>
+            <p class="section-subtitle">Tips and resources for Nigerians</p>
+            <div class="blog-list">
+                <a href="blog-saving-money-nigeria.html" class="blog-item">
+                    <div class="blog-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
                         </svg>
                     </div>
                     <div>
-                        <h3 style="font-size: 1rem; font-weight: 600; color: #1E293B; margin-bottom: 0.25rem;">10 Practical Ways to Save Money in Nigeria</h3>
-                        <p style="font-size: 0.875rem; color: #64748B; margin: 0; line-height: 1.5;">Proven strategies for Nigerian households dealing with rising costs.</p>
+                        <h3>10 Ways to Save Money in Nigeria</h3>
+                        <p>Practical tips that actually work for Nigerian households.</p>
                     </div>
                 </a>
-                
-                <a href="blog-online-scams.html" style="display: flex; gap: 1rem; background: #fff; border-radius: 0.5rem; padding: 1.25rem; text-decoration: none; color: inherit; border: 1px solid #E2E8F0; transition: all 0.25s ease;">
-                    <div style="width: 48px; height: 48px; background: #DC2626; border-radius: 0.5rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                <a href="blog-online-scams.html" class="blog-item">
+                    <div class="blog-icon" style="background: #DC2626;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                         </svg>
                     </div>
                     <div>
-                        <h3 style="font-size: 1rem; font-weight: 600; color: #1E293B; margin-bottom: 0.25rem;">How to Identify Fake Giveaways and Online Scams</h3>
-                        <p style="font-size: 0.875rem; color: #64748B; margin: 0; line-height: 1.5;">Warning signs of fraudulent giveaways and how to protect yourself.</p>
+                        <h3>How to Spot Fake Giveaways</h3>
+                        <p>Protect yourself from online scams with these warning signs.</p>
                     </div>
                 </a>
-                
-                <a href="blog-side-hustles.html" style="display: flex; gap: 1rem; background: #fff; border-radius: 0.5rem; padding: 1.25rem; text-decoration: none; color: inherit; border: 1px solid #E2E8F0; transition: all 0.25s ease;">
-                    <div style="width: 48px; height: 48px; background: #D4AF37; border-radius: 0.5rem; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
-                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                <a href="blog-side-hustles.html" class="blog-item">
+                    <div class="blog-icon" style="background: var(--orange);">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
                         </svg>
                     </div>
                     <div>
-                        <h3 style="font-size: 1rem; font-weight: 600; color: #1E293B; margin-bottom: 0.25rem;">15 Legitimate Side Hustles in Nigeria</h3>
-                        <p style="font-size: 0.875rem; color: #64748B; margin: 0; line-height: 1.5;">Real income opportunities for Nigerians looking to earn extra.</p>
+                        <h3>15 Side Hustles You Can Start Today</h3>
+                        <p>Legitimate ways Nigerians are earning extra income.</p>
                     </div>
                 </a>
             </div>
-            
-            <div style="text-align: center; margin-top: 1.5rem;">
-                <a href="blog.html" style="color: #1E3A5F; font-weight: 600; text-decoration: none;">View All Articles →</a>
-            </div>
+            <a href="blog.html" class="view-all">View All Articles →</a>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo" style="color: white;">NaijaWins</div>
+                    <p>Nigeria's free weekly cash giveaway platform.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Pages</h4>
+                    <a href="about.html">About</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 NaijaWins. All rights reserved.</p>
+                <p class="footer-disclaimer">This promotion is not sponsored by or associated with any social media platform. No purchase necessary. Must be 18+ and a Nigerian resident.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                item.classList.toggle('open');
+            });
+        });
+        
+        // Dynamic entry count
+        const entriesEl = document.getElementById('entries-count');
+        let count = 4892;
+        setInterval(() => {
+            if (Math.random() > 0.7) {
+                count += Math.floor(Math.random() * 3) + 1;
+                entriesEl.textContent = count.toLocaleString();
+            }
+        }, 3000);
+        
+        // Countdown
+        const countdownEl = document.getElementById('countdown-days');
+        const today = new Date();
+        const sunday = new Date(today);
+        sunday.setDate(today.getDate() + (7 - today.getDay()));
+        const daysLeft = Math.ceil((sunday - today) / (1000 * 60 * 60 * 24));
+        countdownEl.textContent = daysLeft;
+        
+        // Form handling
+        const form = document.getElementById('giveaway-form');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('submit-btn');
+            btn.textContent = 'Submitting...';
+            btn.disabled = true;
+            
+            const formData = new FormData(form);
+            try {
+                await fetch('https://script.google.com/macros/s/AKfycbyMrZJzxW0ipDIHEqa8YgVoH2mdZfkY9UEuoTKNP6AN5-oto77_mmdZefMq72qUCQTrlQ/exec', {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors'
+                });
+                window.location.href = 'success.html';
+            } catch (err) {
+                btn.textContent = 'Enter Giveaway';
+                btn.disabled = false;
+                alert('Something went wrong. Please try again.');
+            }
+        });
+    </script>
 </body>
 </html>
-

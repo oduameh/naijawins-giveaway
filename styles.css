@@ -5,40 +5,40 @@
 
 /* CSS Custom Properties */
 :root {
-    /* Color Palette - Professional & Corporate */
-    --color-primary: #1E3A5F;
-    --color-primary-dark: #152A45;
-    --color-primary-light: #2D5A8E;
-    --color-accent: #D4AF37;
-    --color-accent-hover: #C4A030;
+    /* Color Palette - Engaging & Modern */
+    --color-primary: #059669;
+    --color-primary-dark: #047857;
+    --color-primary-light: #10B981;
+    --color-accent: #F97316;
+    --color-accent-hover: #EA580C;
     
     /* Neutrals */
-    --color-dark: #0F172A;
-    --color-dark-soft: #1E293B;
-    --color-text: #1E293B;
-    --color-text-muted: #64748B;
-    --color-text-light: #94A3B8;
-    --color-border: #E2E8F0;
-    --color-border-light: #F1F5F9;
+    --color-dark: #111827;
+    --color-dark-soft: #1F2937;
+    --color-text: #111827;
+    --color-text-muted: #6B7280;
+    --color-text-light: #9CA3AF;
+    --color-border: #E5E7EB;
+    --color-border-light: #F3F4F6;
     
     /* Backgrounds */
-    --bg-page: #F8FAFC;
+    --bg-page: #FFFFFF;
     --bg-card: #FFFFFF;
-    --bg-card-hover: #F8FAFC;
+    --bg-card-hover: #F9FAFB;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #1E3A5F 0%, #2D5A8E 100%);
-    --gradient-accent: linear-gradient(135deg, #D4AF37 0%, #E8C547 100%);
-    --gradient-hero: linear-gradient(180deg, #F1F5F9 0%, #F8FAFC 100%);
-    --gradient-cash: linear-gradient(135deg, #1E3A5F 0%, #D4AF37 100%);
+    --gradient-primary: linear-gradient(135deg, #059669 0%, #10B981 100%);
+    --gradient-accent: linear-gradient(135deg, #F97316 0%, #FB923C 100%);
+    --gradient-hero: linear-gradient(135deg, #ECFDF5 0%, #F0FDF4 100%);
+    --gradient-cash: linear-gradient(135deg, #059669 0%, #10B981 100%);
     
     /* Shadows */
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
-    --shadow-glow: 0 0 40px rgba(30, 58, 95, 0.15);
-    --shadow-accent: 0 4px 14px rgba(212, 175, 55, 0.3);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-glow: 0 0 60px rgba(5, 150, 105, 0.25);
+    --shadow-accent: 0 4px 20px rgba(249, 115, 22, 0.35);
     
     /* Typography */
     --font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;

@@ -3,122 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="You're entered! Good luck in the ₦100,000 cash giveaway.">
-    <meta name="robots" content="noindex, nofollow">
-    
-    <title>Entry Confirmed! | NaijaWins Giveaway</title>
+    <title>Entry Confirmed | NaijaWins</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Google AdSense Script -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3212022468120924"
      crossorigin="anonymous"></script>
+    
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --green: #059669;
+            --green-light: #10B981;
+            --orange: #F97316;
+            --dark: #111827;
+            --gray: #6B7280;
+            --light-gray: #F3F4F6;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--light-gray);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .container { max-width: 600px; margin: 0 auto; padding: 0 20px; }
+        
+        .header {
+            background: white;
+            border-bottom: 1px solid #E5E7EB;
+            padding: 16px 0;
+        }
+        
+        .header .container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--green);
+            text-decoration: none;
+        }
+        
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 48px 0;
+        }
+        
+        .success-card {
+            background: white;
+            border-radius: 16px;
+            padding: 48px 32px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .check-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        
+        .check-icon svg {
+            color: white;
+        }
+        
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+        
+        .subtitle {
+            color: var(--gray);
+            margin-bottom: 32px;
+            font-size: 1rem;
+        }
+        
+        .info-box {
+            background: var(--light-gray);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+        
+        .info-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .info-item:last-child { margin-bottom: 0; }
+        
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .info-icon svg { color: var(--green); }
+        
+        .info-text h4 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+        
+        .info-text p {
+            font-size: 0.8125rem;
+            color: var(--gray);
+        }
+        
+        .share-section {
+            border-top: 1px solid #E5E7EB;
+            padding-top: 24px;
+            margin-bottom: 24px;
+        }
+        
+        .share-section h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: opacity 0.2s;
+        }
+        
+        .share-btn:hover { opacity: 0.9; }
+        .share-btn.whatsapp { background: #25D366; }
+        .share-btn.facebook { background: #1877F2; }
+        .share-btn.twitter { background: #000; }
+        
+        .back-link {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+        }
+        
+        /* Ad */
+        .ad-container {
+            padding: 24px 0;
+            background: white;
+            margin-top: auto;
+        }
+        
+        .footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.6);
+            padding: 24px 0;
+            text-align: center;
+            font-size: 0.75rem;
+        }
+    </style>
 </head>
 <body>
-    <!-- Decorative Background Elements -->
-    <div class="bg-decoration">
-        <div class="bg-circle bg-circle-1"></div>
-        <div class="bg-circle bg-circle-2"></div>
-        <div class="bg-circle bg-circle-3"></div>
-    </div>
-
-    <!-- Header -->
     <header class="header">
         <div class="container">
-            <a href="/" class="logo">
-                <svg class="logo-icon-svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/><path d="M16 8L20 12H17V20H15V12H12L16 8Z" fill="white"/><path d="M10 22H22V24H10V22Z" fill="white"/><defs><linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#1E3A5F"/><stop offset="100%" stop-color="#D4AF37"/></linearGradient></defs></svg>
-                <span class="logo-text">NaijaWins</span>
-            </a>
+            <a href="/" class="logo">NaijaWins</a>
         </div>
     </header>
 
-    <!-- Success Section -->
-    <section class="success-section">
+    <main>
         <div class="container">
             <div class="success-card">
-                <div class="success-animation">
-                    <div class="checkmark-circle">
-                        <svg class="checkmark" viewBox="0 0 52 52">
-                            <circle class="checkmark-bg" cx="26" cy="26" r="25" fill="none"/>
-                            <path class="checkmark-path" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
-                        </svg>
-                    </div>
-                    <div class="confetti">
-                        <span>🎉</span>
-                        <span>🎊</span>
-                        <span>✨</span>
-                        <span>💫</span>
-                        <span>🌟</span>
-                    </div>
+                <div class="check-icon">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                        <polyline points="20 6 9 17 4 12"/>
+                    </svg>
                 </div>
                 
-                <h1 class="success-title">You're In!</h1>
-                <p class="success-subtitle">Your entry has been confirmed for the ₦100,000 cash giveaway.</p>
+                <h1>You're In!</h1>
+                <p class="subtitle">Your entry for this week's ₦100,000 giveaway has been confirmed.</p>
                 
-                <div class="success-details">
-                    <div class="detail-card">
-                        <div class="detail-icon">📧</div>
-                        <div class="detail-text">
-                            <h4>Check Your Email</h4>
-                            <p>We've sent a confirmation to your email address. Make sure to check your spam folder.</p>
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <div class="detail-icon">📅</div>
-                        <div class="detail-text">
-                            <h4>Winner Announcement</h4>
-                            <p>Winners are selected and announced every Sunday at 6:00 PM WAT.</p>
-                        </div>
-                    </div>
-                    <div class="detail-card">
-                        <div class="detail-icon">🔔</div>
-                        <div class="detail-text">
-                            <h4>Stay Updated</h4>
-                            <p>Keep an eye on your inbox. If you win, we'll contact you via email.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="share-section">
-                    <h3>Share for Extra Luck! 🍀</h3>
-                    <p>Tell your friends about the giveaway</p>
-                    <div class="share-buttons">
-                        <a href="https://wa.me/?text=I%20just%20entered%20the%20NaijaWins%20%E2%82%A6100%2C000%20cash%20giveaway!%20Enter%20free%20here%3A%20https%3A%2F%2Fnaijawins.digital" target="_blank" class="share-btn whatsapp">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                <div class="info-box">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
                             </svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>Check Your Email</h4>
+                            <p>We've sent a confirmation to your inbox.</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>Winner Announcement</h4>
+                            <p>The winner will be announced Sunday at 6:00 PM WAT.</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                                <line x1="1" y1="10" x2="23" y2="10"/>
+                            </svg>
+                        </div>
+                        <div class="info-text">
+                            <h4>Direct Payment</h4>
+                            <p>Winners receive cash via bank transfer within 48 hours.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="share-section">
+                    <h3>Share with friends</h3>
+                    <div class="share-buttons">
+                        <a href="https://wa.me/?text=I%20just%20entered%20the%20NaijaWins%20giveaway%20for%20a%20chance%20to%20win%20₦100,000!%20Enter%20free%20at%20https://naijawins.digital" target="_blank" class="share-btn whatsapp">
                             WhatsApp
                         </a>
                         <a href="https://www.facebook.com/sharer/sharer.php?u=https://naijawins.digital" target="_blank" class="share-btn facebook">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
                             Facebook
                         </a>
-                        <a href="https://twitter.com/intent/tweet?text=I%20just%20entered%20the%20NaijaWins%20%E2%82%A6100%2C000%20cash%20giveaway!%20Enter%20free%20here%3A&url=https://naijawins.digital" target="_blank" class="share-btn twitter">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                            </svg>
-                            X (Twitter)
+                        <a href="https://twitter.com/intent/tweet?text=I%20just%20entered%20the%20NaijaWins%20giveaway!%20Win%20₦100,000%20free%20→%20https://naijawins.digital" target="_blank" class="share-btn twitter">
+                            X
                         </a>
                     </div>
                 </div>
-
-                <a href="/" class="back-home">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M19 12H5M12 19l-7-7 7-7"/>
-                    </svg>
-                    Back to Home
-                </a>
+                
+                <a href="/" class="back-link">← Back to Home</a>
             </div>
         </div>
-    </section>
+    </main>
 
-    <!-- Ad Slot - Success Page -->
-    <div class="ad-container ad-success">
+    <div class="ad-container">
         <div class="container">
             <ins class="adsbygoogle"
                  style="display:block"
@@ -126,27 +283,16 @@
                  data-ad-slot="9057164066"
                  data-ad-format="auto"
                  data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer footer-simple">
+    <footer class="footer">
         <div class="container">
-            <div class="footer-bottom">
-                <p>&copy; 2024 NaijaWins. All rights reserved.</p>
-                <div class="footer-links-inline">
-                    <a href="privacy.html">Privacy Policy</a>
-                    <span>•</span>
-                    <a href="terms.html">Terms & Conditions</a>
-                </div>
-            </div>
+            <p>© 2024 NaijaWins. All rights reserved.</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
+
 
