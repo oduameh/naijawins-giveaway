@@ -9,7 +9,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3212022468120924"
@@ -24,7 +24,17 @@
     <header class="header">
         <div class="container">
             <a href="/" class="logo">
-                <span class="logo-icon">🎁</span>
+                <svg class="logo-icon-svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                    <path d="M16 8L20 12H17V20H15V12H12L16 8Z" fill="white"/>
+                    <path d="M10 22H22V24H10V22Z" fill="white"/>
+                    <defs>
+                        <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" stop-color="#1E3A5F"/>
+                            <stop offset="100%" stop-color="#D4AF37"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
                 <span class="logo-text">NaijaWins</span>
             </a>
             <nav class="nav-links">
@@ -53,7 +63,12 @@
                                 
                                 <div class="contact-methods">
                                     <div class="contact-method">
-                                        <span class="contact-icon">📧</span>
+                                        <span class="contact-icon" style="width: 40px; height: 40px; background: #1E3A5F; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                                <polyline points="22,6 12,13 2,6"/>
+                                            </svg>
+                                        </span>
                                         <div>
                                             <h3>Email Support</h3>
                                             <p>For general inquiries and support</p>
@@ -61,7 +76,11 @@
                                         </div>
                                     </div>
                                     <div class="contact-method">
-                                        <span class="contact-icon">🔒</span>
+                                        <span class="contact-icon" style="width: 40px; height: 40px; background: #1E3A5F; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                            </svg>
+                                        </span>
                                         <div>
                                             <h3>Privacy Inquiries</h3>
                                             <p>For data and privacy-related questions</p>
@@ -69,7 +88,11 @@
                                         </div>
                                     </div>
                                     <div class="contact-method">
-                                        <span class="contact-icon">⏰</span>
+                                        <span class="contact-icon" style="width: 40px; height: 40px; background: #D4AF37; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+                                                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                                            </svg>
+                                        </span>
                                         <div>
                                             <h3>Response Time</h3>
                                             <p>We typically respond within 24-48 hours during business days.</p>
@@ -158,10 +181,20 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="/" class="logo">
-                        <span class="logo-icon">🎁</span>
+                        <svg class="logo-icon-svg" width="28" height="28" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="url(#logo-gradient-footer)"/>
+                            <path d="M16 8L20 12H17V20H15V12H12L16 8Z" fill="white"/>
+                            <path d="M10 22H22V24H10V22Z" fill="white"/>
+                            <defs>
+                                <linearGradient id="logo-gradient-footer" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#D4AF37"/>
+                                    <stop offset="100%" stop-color="#E8C547"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
                         <span class="logo-text">NaijaWins</span>
                     </a>
-                    <p>Your chance to win cash prizes every week. Free to enter, real cash prizes.</p>
+                    <p>Nigeria's legitimate weekly cash giveaway platform.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-column">
