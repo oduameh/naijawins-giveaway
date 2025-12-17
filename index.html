@@ -397,6 +397,61 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         
+        /* Compact Hero */
+        .blog-hero.compact { padding: 40px 0 24px; }
+        .blog-hero.compact h1 { font-size: 1.75rem; margin-bottom: 8px; }
+        .blog-hero.compact .blog-hero-subtitle { margin-bottom: 0; font-size: 1rem; }
+        
+        /* Premium Ad Slot */
+        .ad-premium { background: #F9FAFB; padding: 16px 0; margin: 0; }
+        
+        /* Compact Articles */
+        .featured-compact { padding: 32px 0; }
+        .compact-article-grid { display: grid; gap: 12px; }
+        @media (min-width: 640px) { .compact-article-grid { grid-template-columns: 1fr 1fr; } }
+        
+        .compact-article {
+            display: block;
+            background: white;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            padding: 16px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+        }
+        
+        .compact-article:hover {
+            border-color: var(--green);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .compact-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+        }
+        
+        .compact-tag.loans { background: #DBEAFE; color: #1E40AF; }
+        .compact-tag.crypto { background: #FEF3C7; color: #92400E; }
+        .compact-tag.trading { background: #EDE9FE; color: #5B21B6; }
+        .compact-tag.credit { background: #D1FAE5; color: #065F46; }
+        
+        .compact-article h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.3;
+        }
+        
+        .compact-meta {
+            font-size: 0.75rem;
+            color: var(--gray);
+        }
+        
         .article-content {
             padding: 20px;
         }
@@ -871,55 +926,55 @@
         </div>
     </div>
 
-    <!-- Blog Hero -->
-    <section class="blog-hero">
+    <!-- Blog Hero - Compact for Ad Space -->
+    <section class="blog-hero compact">
         <div class="container">
             <h1>Your Guide to <span>Financial Freedom</span></h1>
             <p class="blog-hero-subtitle">Practical money tips, guides, and resources for Nigerians</p>
-            
-            <!-- Featured Articles -->
-            <div class="featured-grid">
-                <article class="article-card">
-                    <a href="blog-loan-apps.html">
-                        <div class="article-image" style="background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);">
-                            <span class="article-category">Loans</span>
-                            <svg class="article-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-                        </div>
-                        <div class="article-content">
-                            <h3>Best Loan Apps in Nigeria 2025: Get Instant Loans Without Collateral</h3>
-                            <p>Compare FairMoney, Carbon, Branch and more. Find the lowest rates and get approved in minutes.</p>
-                            <span class="article-meta">15 min read • Updated Dec 2025</span>
-                        </div>
-                    </a>
-                </article>
-                
-                <article class="article-card">
-                    <a href="blog-crypto-nigeria.html">
-                        <div class="article-image" style="background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);">
-                            <span class="article-category">Crypto</span>
-                            <svg class="article-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9 12h6M12 9v6"/><path d="M14.5 9a2.5 2.5 0 010 5H10"/></svg>
-                        </div>
-                        <div class="article-content">
-                            <h3>How to Buy Bitcoin in Nigeria Safely</h3>
-                            <p>P2P trading, exchanges, and avoiding scams.</p>
-                            <span class="article-meta">18 min read</span>
-                        </div>
-                    </a>
-                </article>
-                
-                <article class="article-card">
-                    <a href="blog-forex-trading.html">
-                        <div class="article-image" style="background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);">
-                            <span class="article-category">Trading</span>
-                            <svg class="article-icon" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                        </div>
-                        <div class="article-content">
-                            <h3>Forex Trading for Beginners in Nigeria</h3>
-                            <p>Learn the basics, best brokers, and risks.</p>
-                            <span class="article-meta">16 min read</span>
-                        </div>
-                    </a>
-                </article>
+        </div>
+    </section>
+
+    <!-- Premium Ad Slot - Above the Fold -->
+    <div class="ad-container ad-premium">
+        <div class="container">
+            <div class="ad-label">Advertisement</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3212022468120924"
+                 data-ad-slot="9057164066"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
+    <!-- Featured Articles - Compact List -->
+    <section class="content-section featured-compact">
+        <div class="container">
+            <div class="section-header">
+                <h2>📈 Trending Guides</h2>
+            </div>
+            <div class="compact-article-grid">
+                <a href="blog-loan-apps.html" class="compact-article">
+                    <span class="compact-tag loans">💰 Loans</span>
+                    <h3>Best Loan Apps in Nigeria 2025</h3>
+                    <span class="compact-meta">Compare FairMoney, Carbon, Branch • 15 min</span>
+                </a>
+                <a href="blog-crypto-nigeria.html" class="compact-article">
+                    <span class="compact-tag crypto">₿ Crypto</span>
+                    <h3>How to Buy Bitcoin in Nigeria Safely</h3>
+                    <span class="compact-meta">P2P trading, exchanges, avoid scams • 18 min</span>
+                </a>
+                <a href="blog-forex-trading.html" class="compact-article">
+                    <span class="compact-tag trading">📊 Trading</span>
+                    <h3>Forex Trading for Beginners</h3>
+                    <span class="compact-meta">Best brokers, strategies, risks • 16 min</span>
+                </a>
+                <a href="blog-credit-cards.html" class="compact-article">
+                    <span class="compact-tag credit">💳 Credit</span>
+                    <h3>Best Credit Cards in Nigeria</h3>
+                    <span class="compact-meta">Naira & Dollar cards compared • 12 min</span>
+                </a>
             </div>
         </div>
     </section>
