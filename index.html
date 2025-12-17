@@ -70,7 +70,7 @@
             text-decoration: none;
         }
         
-        .nav-links { display: flex; gap: 24px; align-items: center; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a {
             color: var(--gray);
             text-decoration: none;
@@ -78,6 +78,35 @@
             font-weight: 500;
         }
         .nav-links a:hover { color: var(--dark); }
+        
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-btn { cursor: pointer; display: flex; align-items: center; gap: 4px; }
+        .nav-dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: white;
+            border: 1px solid var(--light-gray);
+            border-radius: 8px;
+            padding: 8px 0;
+            min-width: 160px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.2s;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 8px 16px;
+            color: var(--gray);
+        }
+        .nav-dropdown-menu a:hover { background: var(--light-gray); color: var(--dark); }
         
         .nav-giveaway {
             background: var(--orange) !important;
@@ -676,6 +705,13 @@
                 <a href="blog.html">Blog</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
+                <div class="nav-dropdown">
+                    <span class="nav-dropdown-btn">Legal <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+                    <div class="nav-dropdown-menu">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms & Conditions</a>
+                    </div>
+                </div>
                 <a href="#giveaway" class="nav-giveaway">Win ₦100K →</a>
             </nav>
         </div>

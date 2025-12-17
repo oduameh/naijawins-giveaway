@@ -21,9 +21,25 @@
         
         .header { background: #fff; border-bottom: 1px solid var(--light); padding: 16px 0; position: sticky; top: 0; z-index: 100; }
         .header .container { display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-size: 1.25rem; font-weight: 800; color: var(--green); text-decoration: none; }
-        .nav-links { display: flex; gap: 24px; }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--green); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; align-items: center; }
         .nav-links a { color: var(--gray); text-decoration: none; font-size: 0.875rem; font-weight: 500; }
+        .nav-links a:hover { color: var(--dark); }
+        .nav-links a.active { color: var(--green); }
+        
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-btn { cursor: pointer; display: flex; align-items: center; gap: 4px; color: var(--gray); font-size: 0.875rem; font-weight: 500; }
+        .nav-dropdown-menu {
+            position: absolute; top: 100%; right: 0; background: white; border: 1px solid var(--light);
+            border-radius: 8px; padding: 8px 0; min-width: 160px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            opacity: 0; visibility: hidden; transform: translateY(8px); transition: all 0.2s;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .nav-dropdown-menu a { display: block; padding: 8px 16px; }
+        .nav-dropdown-menu a:hover { background: var(--light); }
+        
+        .nav-giveaway { background: var(--orange) !important; color: white !important; padding: 8px 16px; border-radius: 50px; font-weight: 600 !important; }
+        .nav-giveaway:hover { background: #EA580C !important; }
         
         .page-header { padding: 48px 0; text-align: center; background: linear-gradient(180deg, #ECFDF5 0%, #fff 100%); }
         .page-header h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 8px; }
@@ -69,10 +85,17 @@
         <div class="container">
             <a href="/" class="logo">NaijaWins</a>
             <nav class="nav-links">
-                <a href="/">Home</a>
+                <a href="blog.html" class="active">Blog</a>
                 <a href="about.html">About</a>
-                <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
+                <div class="nav-dropdown">
+                    <span class="nav-dropdown-btn">Legal <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
+                    <div class="nav-dropdown-menu">
+                        <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms & Conditions</a>
+                    </div>
+                </div>
+                <a href="/#giveaway" class="nav-giveaway">Win ₦100K →</a>
             </nav>
         </div>
     </header>
