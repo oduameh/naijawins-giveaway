@@ -3,264 +3,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Terms and Conditions for NaijaWins giveaway - Rules, eligibility, and prize information.">
-    <meta name="robots" content="noindex, follow">
     
-    <title>Terms and Conditions | NaijaWins</title>
+    <title>Terms of Service | NaijaWins</title>
+    <meta name="description" content="Terms of Service for NaijaWins personal finance publication.">
+    <meta name="robots" content="noindex, follow">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- NO ADSENSE ON POLICY PAGES -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         
         :root {
-            --green: #059669;
-            --dark: #111827;
-            --gray: #6B7280;
-            --light-gray: #F3F4F6;
+            --primary: #0F172A;
+            --accent: #0EA5E9;
+            --text: #334155;
+            --text-light: #64748B;
+            --border: #E2E8F0;
+            --bg: #F8FAFC;
+            --white: #FFFFFF;
         }
         
         body {
             font-family: 'Inter', -apple-system, sans-serif;
-            background: #fff;
-            color: var(--dark);
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.7;
         }
         
         .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
         
         .header {
-            background: #fff;
-            border-bottom: 1px solid var(--light-gray);
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
             padding: 16px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
         
-        .header .container {
+        .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         
         .logo {
+            font-family: 'Merriweather', Georgia, serif;
             font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--green);
+            font-weight: 700;
+            color: var(--primary);
             text-decoration: none;
         }
         
-        .nav-links { display: flex; gap: 20px; align-items: center; }
-        .nav-links a {
-            color: var(--gray);
-            text-decoration: none;
-            font-size: 0.875rem;
-            font-weight: 500;
-        }
-        .nav-links a:hover { color: var(--dark); }
+        .logo span { color: var(--accent); }
+        
+        .nav-links { display: flex; gap: 24px; }
+        .nav-links a { color: var(--text); text-decoration: none; font-size: 0.875rem; }
         
         .page-header {
             padding: 48px 0 32px;
-            border-bottom: 1px solid var(--light-gray);
+            border-bottom: 1px solid var(--border);
+            background: var(--white);
         }
         
         .page-header h1 {
+            font-family: 'Merriweather', Georgia, serif;
             font-size: 2rem;
-            font-weight: 800;
+            color: var(--primary);
             margin-bottom: 8px;
         }
         
-        .page-header .date {
-            color: var(--gray);
-            font-size: 0.875rem;
-        }
+        .page-header .date { color: var(--text-light); font-size: 0.875rem; }
         
         .content {
             padding: 48px 0;
+            background: var(--white);
         }
         
         .content h2 {
             font-size: 1.25rem;
-            font-weight: 700;
+            color: var(--primary);
             margin: 32px 0 16px;
             padding-top: 16px;
-            border-top: 1px solid var(--light-gray);
+            border-top: 1px solid var(--border);
         }
         
-        .content h2:first-of-type {
-            margin-top: 0;
-            padding-top: 0;
-            border-top: none;
-        }
+        .content h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
         
-        .content p {
-            margin-bottom: 16px;
-            color: #374151;
-        }
-        
-        .content ul, .content ol {
-            margin: 16px 0;
-            padding-left: 24px;
-        }
-        
-        .content li {
-            margin-bottom: 8px;
-            color: #374151;
-        }
-        
-        .content a {
-            color: var(--green);
-        }
-        
-        .highlight-box {
-            background: #ECFDF5;
-            border-left: 4px solid var(--green);
-            padding: 16px 20px;
-            margin: 24px 0;
-            border-radius: 0 8px 8px 0;
-        }
+        .content p { margin-bottom: 16px; }
+        .content ul { margin: 16px 0 16px 24px; }
+        .content li { margin-bottom: 8px; }
+        .content a { color: var(--accent); }
         
         .footer {
-            background: var(--dark);
+            background: var(--primary);
             color: rgba(255,255,255,0.6);
             padding: 32px 0;
-            margin-top: 48px;
+            text-align: center;
         }
         
-        .footer .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 16px;
-        }
-        
-        .footer a {
-            color: rgba(255,255,255,0.8);
-            text-decoration: none;
-            margin-left: 24px;
-        }
-        
-        .footer a:hover { color: #fff; }
+        .footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 12px; }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <a href="/" class="logo">NaijaWins</a>
-            <nav class="nav-links">
-                <a href="/">Home</a>
-                <a href="blog.html">Blog</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+            <div class="header-inner">
+                <a href="/" class="logo">Naija<span>Wins</span></a>
+                <nav class="nav-links">
+                    <a href="/">Home</a>
+                    <a href="blog.html">Guides</a>
+                    <a href="about.html">About</a>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main>
+    <div class="page-header">
         <div class="container">
-            <div class="page-header">
-                <h1>Terms and Conditions</h1>
-                <p class="date">Last Updated: December 2025</p>
-            </div>
+            <h1>Terms of Service</h1>
+            <p class="date">Last Updated: December 2025</p>
+        </div>
+    </div>
 
-            <div class="content">
-                <p>Please read these Terms and Conditions ("Terms") carefully before entering the NaijaWins giveaway. By entering, you agree to be bound by these Terms.</p>
+    <main class="content">
+        <div class="container">
+            <p>Welcome to NaijaWins. By accessing or using our website, you agree to be bound by these Terms of Service.</p>
 
-                <div class="highlight-box">
-                    <strong>NO PURCHASE NECESSARY.</strong> A purchase or payment will not increase your chances of winning. The giveaway is completely free to enter.
-                </div>
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing and using NaijaWins (naijawins.digital), you accept and agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website.</p>
 
-                <h2>1. Giveaway Overview</h2>
-                <p>NaijaWins operates weekly cash giveaway promotions offering ₦100,000 (One Hundred Thousand Naira) to randomly selected participants.</p>
-                <ul>
-                    <li><strong>Prize:</strong> ₦100,000 cash per weekly draw</li>
-                    <li><strong>Entry Period:</strong> Monday 12:00 AM to Sunday 5:00 PM WAT</li>
-                    <li><strong>Winner Selection:</strong> Sundays at 6:00 PM WAT</li>
-                    <li><strong>Winner Notification:</strong> Via email within 24 hours</li>
-                </ul>
+            <h2>2. Description of Service</h2>
+            <p>NaijaWins is a personal finance publication that provides educational content about:</p>
+            <ul>
+                <li>Nigerian tax laws and regulations</li>
+                <li>Loan products and credit options</li>
+                <li>Banking services and accounts</li>
+                <li>Investment opportunities and strategies</li>
+                <li>Insurance products</li>
+                <li>General money management and budgeting</li>
+            </ul>
 
-                <h2>2. Eligibility</h2>
-                <p>To enter and win, you must:</p>
-                <ul>
-                    <li>Be at least 18 years of age</li>
-                    <li>Be a legal resident of Nigeria</li>
-                    <li>Have a valid email address</li>
-                    <li>Have a valid Nigerian bank account (for prize payment)</li>
-                    <li>Not be an employee or family member of NaijaWins</li>
-                </ul>
+            <h2>3. Educational Content Disclaimer</h2>
+            <p><strong>The content on NaijaWins is for educational and informational purposes only.</strong> It does not constitute financial, investment, tax, or legal advice. You should consult with qualified professionals before making any financial decisions.</p>
+            <p>We make every effort to ensure accuracy, but we cannot guarantee that all information is current or error-free. Financial regulations and products change frequently.</p>
 
-                <h2>3. How to Enter</h2>
-                <ol>
-                    <li>Visit our website at the designated entry page</li>
-                    <li>Provide a valid email address</li>
-                    <li>Agree to these Terms and our Privacy Policy</li>
-                    <li>Submit your entry</li>
-                </ol>
-                <p><strong>Limit:</strong> One entry per person per week. Multiple entries may result in disqualification.</p>
+            <h2>4. No Professional Relationship</h2>
+            <p>Using our website does not create a professional relationship between you and NaijaWins or any of our contributors. Our content is general information and may not apply to your specific situation.</p>
 
-                <h2>4. Winner Selection</h2>
-                <p>Winners are selected randomly using a certified random number generator. Every valid entry has an equal chance of winning. Odds depend on the total number of entries.</p>
+            <h2>5. Third-Party Links</h2>
+            <p>Our website may contain links to third-party websites, products, or services. We are not responsible for the content, accuracy, or practices of these external sites. Inclusion of links does not imply endorsement.</p>
 
-                <h2>5. Prize Claim</h2>
-                <ul>
-                    <li>Winners are notified via email</li>
-                    <li>Winners must respond within 48 hours</li>
-                    <li>Winners must provide Nigerian bank account details</li>
-                    <li>Failure to respond may result in prize forfeiture</li>
-                    <li>Prizes are non-transferable</li>
-                </ul>
+            <h2>6. Affiliate Disclosure</h2>
+            <p>Some links on our website may be affiliate links. This means we may earn a commission if you click through and make a purchase. This does not affect our editorial integrity or the price you pay.</p>
 
-                <h2>6. Prize Payment</h2>
-                <p>Payment is made via bank transfer within 24-48 hours of verification. Winners are responsible for any applicable taxes.</p>
+            <h2>7. Intellectual Property</h2>
+            <p>All content on NaijaWins, including text, graphics, logos, and images, is the property of NaijaWins and is protected by copyright laws. You may not reproduce, distribute, or republish our content without written permission.</p>
 
-                <h2>7. Disqualification</h2>
-                <p>We may disqualify anyone who:</p>
-                <ul>
-                    <li>Violates these Terms</li>
-                    <li>Provides false information</li>
-                    <li>Attempts multiple entries</li>
-                    <li>Uses automated systems or bots</li>
-                    <li>Engages in fraud</li>
-                </ul>
+            <h2>8. User Conduct</h2>
+            <p>When using our website, you agree not to:</p>
+            <ul>
+                <li>Use the site for any unlawful purpose</li>
+                <li>Attempt to gain unauthorized access to our systems</li>
+                <li>Interfere with the proper functioning of the website</li>
+                <li>Submit false or misleading information</li>
+                <li>Scrape or collect data from our website without permission</li>
+            </ul>
 
-                <h2>8. Disclaimer</h2>
-                <p><strong>This promotion is not sponsored, endorsed, or administered by Facebook, Instagram, TikTok, X (Twitter), Google, or any other platform.</strong></p>
+            <h2>9. Newsletter Subscription</h2>
+            <p>If you subscribe to our newsletter, you agree to receive periodic emails about finance topics. You can unsubscribe at any time using the link provided in each email.</p>
 
-                <h2>9. Limitation of Liability</h2>
-                <p>NaijaWins is not responsible for:</p>
-                <ul>
-                    <li>Lost, late, or incomplete entries</li>
-                    <li>Technical failures or errors</li>
-                    <li>Any damages arising from participation</li>
-                </ul>
+            <h2>10. Limitation of Liability</h2>
+            <p>NaijaWins and its contributors shall not be liable for any damages arising from your use of this website or reliance on any information provided. This includes direct, indirect, incidental, or consequential damages.</p>
 
-                <h2>10. Modification</h2>
-                <p>We reserve the right to modify these Terms, cancel, suspend, or terminate the giveaway at any time.</p>
+            <h2>11. Changes to Terms</h2>
+            <p>We may update these Terms of Service at any time. Continued use of the website after changes constitutes acceptance of the new terms. We encourage you to review this page periodically.</p>
 
-                <h2>11. Governing Law</h2>
-                <p>These Terms are governed by the laws of the Federal Republic of Nigeria.</p>
+            <h2>12. Governing Law</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the Federal Republic of Nigeria.</p>
 
-                <h2>12. Privacy</h2>
-                <p>Your participation is subject to our <a href="privacy.html">Privacy Policy</a>.</p>
-
-                <h2>13. Contact</h2>
-                <p>Questions? Email us at <a href="mailto:support@naijawins.digital">support@naijawins.digital</a></p>
-            </div>
+            <h2>13. Contact</h2>
+            <p>For questions about these Terms, please contact us at <a href="mailto:hello@naijawins.digital">hello@naijawins.digital</a>.</p>
         </div>
     </main>
 
     <footer class="footer">
         <div class="container">
             <p>© 2025 NaijaWins. All rights reserved.</p>
-            <div>
+            <div style="margin-top: 12px;">
                 <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms & Conditions</a>
+                <a href="terms.html">Terms of Service</a>
             </div>
         </div>
     </footer>

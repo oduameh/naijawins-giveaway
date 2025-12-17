@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About NaijaWins - Nigeria's trusted finance blog and weekly cash giveaway platform. Learn about our mission, team, and commitment to financial education.">
-    <title>About Us | NaijaWins - Finance Blog & Weekly Giveaway</title>
+    
+    <title>About Us | NaijaWins - Nigeria's Personal Finance Publication</title>
+    <meta name="description" content="NaijaWins is Nigeria's trusted personal finance publication. Learn about our mission to help Nigerians make smarter money decisions.">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://naijawins.digital/about.html">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3212022468120924" crossorigin="anonymous"></script>
     
@@ -16,682 +20,441 @@
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         
         :root {
-            --green: #059669;
-            --green-dark: #047857;
-            --green-light: #10B981;
-            --orange: #F97316;
-            --dark: #111827;
-            --gray: #6B7280;
-            --light-gray: #F3F4F6;
+            --primary: #0F172A;
+            --secondary: #1E293B;
+            --accent: #0EA5E9;
+            --accent-dark: #0284C7;
+            --text: #334155;
+            --text-light: #64748B;
+            --border: #E2E8F0;
+            --bg: #F8FAFC;
             --white: #FFFFFF;
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--white);
-            color: var(--dark);
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
         }
         
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
+        .container-wide { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
         /* Header */
         .header {
             background: var(--white);
-            border-bottom: 1px solid var(--light-gray);
+            border-bottom: 1px solid var(--border);
             padding: 16px 0;
             position: sticky;
             top: 0;
             z-index: 100;
         }
         
-        .header .container {
+        .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         .logo {
+            font-family: 'Merriweather', Georgia, serif;
             font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--green);
+            font-weight: 900;
+            color: var(--primary);
             text-decoration: none;
         }
         
-        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .logo span { color: var(--accent); }
+        
+        .nav-links { display: flex; gap: 24px; }
         .nav-links a {
-            color: var(--gray);
+            color: var(--text);
             text-decoration: none;
             font-size: 0.875rem;
             font-weight: 500;
         }
-        .nav-links a:hover { color: var(--dark); }
-        .nav-links a.active { color: var(--green); }
+        .nav-links a:hover { color: var(--accent); }
         
-        .nav-dropdown { position: relative; }
-        .nav-dropdown-btn { cursor: pointer; display: flex; align-items: center; gap: 4px; color: var(--gray); font-size: 0.875rem; font-weight: 500; }
-        .nav-dropdown-menu {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: white;
-            border: 1px solid var(--light-gray);
-            border-radius: 8px;
-            padding: 8px 0;
-            min-width: 160px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(8px);
-            transition: all 0.2s;
-        }
-        .nav-dropdown:hover .nav-dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        .nav-dropdown-menu a {
-            display: block;
-            padding: 8px 16px;
-        }
-        .nav-dropdown-menu a:hover { background: var(--light-gray); }
-        
-        .nav-giveaway {
-            background: var(--orange) !important;
-            color: white !important;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-weight: 600 !important;
-        }
-        .nav-giveaway:hover { background: #EA580C !important; }
-        
-        /* Hero */
-        .page-hero {
-            background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);
-            padding: 64px 0;
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+            padding: 80px 0;
             text-align: center;
         }
         
-        .page-hero h1 {
+        .page-header h1 {
+            font-family: 'Merriweather', Georgia, serif;
             font-size: 2.5rem;
             font-weight: 900;
             margin-bottom: 16px;
         }
         
-        .page-hero p {
-            font-size: 1.25rem;
-            color: var(--gray);
+        .page-header p {
+            font-size: 1.125rem;
+            opacity: 0.9;
             max-width: 600px;
             margin: 0 auto;
         }
         
-        /* Stats Bar */
-        .stats-bar {
-            background: var(--dark);
-            color: white;
-            padding: 32px 0;
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-            text-align: center;
-        }
-        
-        @media (min-width: 640px) {
-            .stats-grid { grid-template-columns: repeat(4, 1fr); }
-        }
-        
-        .stat-item .stat-number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--green-light);
-        }
-        
-        .stat-item .stat-label {
-            font-size: 0.875rem;
-            color: rgba(255,255,255,0.7);
-            margin-top: 4px;
-        }
-        
-        /* Content Sections */
+        /* Content */
         .content-section {
             padding: 64px 0;
         }
         
-        .content-section.alt {
-            background: var(--light-gray);
+        .content-section h2 {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 24px;
         }
         
-        .section-header {
-            text-align: center;
-            margin-bottom: 48px;
+        .content-section p {
+            margin-bottom: 20px;
+            font-size: 1.0625rem;
         }
         
-        .section-header h2 {
-            font-size: 2rem;
-            font-weight: 800;
+        .content-section ul {
+            margin: 20px 0 20px 24px;
+        }
+        
+        .content-section li {
             margin-bottom: 12px;
         }
         
-        .section-header p {
-            font-size: 1.125rem;
-            color: var(--gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        /* Mission Grid */
+        /* Mission Cards */
         .mission-grid {
             display: grid;
-            gap: 32px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin: 48px 0;
         }
         
-        @media (min-width: 768px) {
-            .mission-grid { grid-template-columns: repeat(2, 1fr); }
+        @media (max-width: 768px) {
+            .mission-grid { grid-template-columns: 1fr; }
         }
         
         .mission-card {
-            background: white;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 12px;
             padding: 32px;
-            border-radius: 16px;
-            border: 1px solid var(--light-gray);
+            text-align: center;
         }
         
         .mission-icon {
-            width: 56px;
-            height: 56px;
-            background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-        
-        .mission-card h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        
-        .mission-card p {
-            color: var(--gray);
-            line-height: 1.7;
-        }
-        
-        /* How It Works */
-        .process-steps {
-            display: grid;
-            gap: 24px;
-        }
-        
-        @media (min-width: 768px) {
-            .process-steps { grid-template-columns: repeat(3, 1fr); }
-        }
-        
-        .process-step {
-            text-align: center;
-            padding: 32px 24px;
-            background: white;
+            width: 64px;
+            height: 64px;
+            background: var(--bg);
             border-radius: 16px;
-            border: 2px solid var(--light-gray);
-            position: relative;
-        }
-        
-        .process-step::after {
-            content: '→';
-            position: absolute;
-            right: -20px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.5rem;
-            color: var(--gray);
-        }
-        
-        .process-step:last-child::after { display: none; }
-        
-        @media (max-width: 767px) {
-            .process-step::after { display: none; }
-        }
-        
-        .step-number {
-            width: 48px;
-            height: 48px;
-            background: var(--green);
-            color: white;
-            font-size: 1.25rem;
-            font-weight: 800;
-            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 16px;
+            font-size: 2rem;
         }
         
-        .process-step h3 {
+        .mission-card h3 {
             font-size: 1.125rem;
-            font-weight: 700;
+            color: var(--primary);
             margin-bottom: 8px;
         }
         
-        .process-step p {
-            font-size: 0.9375rem;
-            color: var(--gray);
+        .mission-card p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin: 0;
         }
         
-        /* Values List */
-        .values-list {
-            max-width: 700px;
-            margin: 0 auto;
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 32px;
         }
         
-        .value-item {
-            display: flex;
-            gap: 20px;
-            padding: 24px 0;
-            border-bottom: 1px solid var(--light-gray);
+        @media (max-width: 768px) {
+            .team-grid { grid-template-columns: 1fr; }
         }
         
-        .value-item:last-child { border-bottom: none; }
+        .team-member {
+            text-align: center;
+        }
         
-        .value-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--light-gray);
-            border-radius: 12px;
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
+            margin: 0 auto 16px;
+            color: var(--white);
+            font-size: 2rem;
+            font-weight: 700;
         }
         
-        .value-icon svg { color: var(--green); }
-        
-        .value-content h3 {
+        .team-member h3 {
             font-size: 1.125rem;
-            font-weight: 700;
+            color: var(--primary);
             margin-bottom: 4px;
         }
         
-        .value-content p {
-            color: var(--gray);
-        }
-        
-        /* FAQ */
-        .faq-grid {
-            display: grid;
-            gap: 16px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            background: white;
-            border: 1px solid var(--light-gray);
-            border-radius: 12px;
-            padding: 24px;
-        }
-        
-        .faq-item h3 {
-            font-size: 1rem;
+        .team-role {
+            font-size: 0.875rem;
+            color: var(--accent);
             font-weight: 600;
             margin-bottom: 8px;
         }
         
-        .faq-item p {
-            color: var(--gray);
-            font-size: 0.9375rem;
+        .team-bio {
+            font-size: 0.875rem;
+            color: var(--text-light);
         }
         
-        /* CTA Section */
+        /* Stats */
+        .stats-bar {
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: 48px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+        
+        @media (max-width: 600px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+        
+        /* CTA */
         .cta-section {
-            background: linear-gradient(135deg, var(--dark) 0%, #1F2937 100%);
-            color: white;
+            background: var(--primary);
+            color: var(--white);
             padding: 64px 0;
             text-align: center;
         }
         
         .cta-section h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 12px;
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 1.75rem;
+            margin-bottom: 16px;
         }
         
         .cta-section p {
-            font-size: 1.125rem;
             opacity: 0.8;
-            margin-bottom: 32px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            flex-wrap: wrap;
+            margin-bottom: 24px;
         }
         
         .cta-btn {
             display: inline-block;
+            background: var(--accent);
+            color: var(--white);
             padding: 14px 32px;
-            border-radius: 50px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.2s;
         }
         
-        .cta-btn-primary {
-            background: var(--orange);
-            color: white;
-        }
-        
-        .cta-btn-primary:hover { background: #EA580C; transform: translateY(-2px); }
-        
-        .cta-btn-secondary {
-            background: rgba(255,255,255,0.1);
-            color: white;
-            border: 1px solid rgba(255,255,255,0.2);
-        }
-        
-        .cta-btn-secondary:hover { background: rgba(255,255,255,0.2); }
+        .cta-btn:hover { background: var(--accent-dark); }
         
         /* Footer */
         .footer {
-            background: var(--dark);
-            color: white;
-            padding: 48px 0 24px;
-        }
-        
-        .footer-content {
-            display: grid;
-            gap: 32px;
-            margin-bottom: 32px;
-        }
-        
-        @media (min-width: 640px) {
-            .footer-content { grid-template-columns: 2fr 1fr 1fr 1fr; }
-        }
-        
-        .footer-brand p {
+            background: var(--secondary);
             color: rgba(255,255,255,0.6);
-            font-size: 0.875rem;
-            margin-top: 8px;
+            padding: 32px 0;
+            text-align: center;
         }
         
-        .footer-links h4 {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            color: rgba(255,255,255,0.5);
-        }
-        
-        .footer-links a {
-            display: block;
+        .footer a {
             color: rgba(255,255,255,0.8);
             text-decoration: none;
-            font-size: 0.875rem;
-            margin-bottom: 8px;
-        }
-        
-        .footer-links a:hover { color: white; }
-        
-        .footer-bottom {
-            padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.5);
+            margin: 0 12px;
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="/" class="logo">NaijaWins</a>
+        <div class="header-inner">
+            <a href="/" class="logo">Naija<span>Wins</span></a>
             <nav class="nav-links">
-                <a href="blog.html">Blog</a>
-                <a href="about.html" class="active">About</a>
+                <a href="/">Home</a>
+                <a href="blog.html">Guides</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
-                <div class="nav-dropdown">
-                    <span class="nav-dropdown-btn">Legal <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
-                    <div class="nav-dropdown-menu">
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms & Conditions</a>
-                    </div>
-                </div>
-                <a href="/#giveaway" class="nav-giveaway">Win ₦100K →</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="page-hero">
+    <section class="page-header">
         <div class="container">
             <h1>About NaijaWins</h1>
-            <p>Nigeria's trusted finance blog and weekly cash giveaway platform, helping you build a better financial future.</p>
+            <p>Nigeria's trusted source for personal finance education, tax guidance, and money management tips.</p>
         </div>
     </section>
 
-    <!-- Stats Bar -->
+    <!-- Stats -->
     <section class="stats-bar">
-        <div class="container">
+        <div class="container-wide">
             <div class="stats-grid">
-                <div class="stat-item">
+                <div>
                     <div class="stat-number">20+</div>
-                    <div class="stat-label">Finance Articles</div>
+                    <div class="stat-label">Expert Guides</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">₦100K</div>
-                    <div class="stat-label">Weekly Prize</div>
+                <div>
+                    <div class="stat-number">2024</div>
+                    <div class="stat-label">Founded</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">Free</div>
-                    <div class="stat-label">Entry Cost</div>
+                <div>
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Topics Covered</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number">Weekly</div>
-                    <div class="stat-label">Draw Frequency</div>
+                <div>
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Free Access</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Mission Section -->
+    <!-- Our Mission -->
     <section class="content-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Mission</h2>
-                <p>We're on a mission to improve financial literacy in Nigeria while giving back to our community.</p>
+            <h2>Our Mission</h2>
+            <p>NaijaWins was founded with a simple mission: <strong>to help everyday Nigerians make smarter money decisions</strong>.</p>
+            
+            <p>We believe that financial literacy shouldn't be a luxury. Whether you're trying to understand the new tax reforms, compare loan apps, start investing, or simply save more money, you deserve access to clear, accurate, and actionable information.</p>
+            
+            <p>Our team of finance professionals creates in-depth guides that break down complex financial topics into simple, practical advice tailored specifically for Nigerians.</p>
+        </div>
+    </section>
+
+    <!-- What We Cover -->
+    <section class="content-section" style="background: var(--white);">
+        <div class="container-wide">
+            <div class="container">
+                <h2>What We Cover</h2>
             </div>
             
-            <div class="mission-grid">
+            <div class="mission-grid" style="max-width: 1000px; margin: 32px auto;">
                 <div class="mission-card">
-                    <div class="mission-icon">📚</div>
-                    <h3>Financial Education</h3>
-                    <p>We create practical, easy-to-understand guides on loans, savings, investing, insurance, and more. Our content is tailored specifically for Nigerians, addressing real challenges and opportunities in our economy.</p>
+                    <div class="mission-icon">📋</div>
+                    <h3>Taxes & Compliance</h3>
+                    <p>PAYE, VAT, tax filing, and understanding Nigeria's evolving tax regulations</p>
                 </div>
                 <div class="mission-card">
-                    <div class="mission-icon">🎁</div>
-                    <h3>Weekly Giveaways</h3>
-                    <p>Every week, we give away ₦100,000 cash to one lucky winner. Entry is 100% free—no purchase necessary, no hidden fees. Winners receive payment directly to their bank account within 24-48 hours.</p>
+                    <div class="mission-icon">💰</div>
+                    <h3>Loans & Credit</h3>
+                    <p>Honest reviews of loan apps, credit cards, and borrowing responsibly</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">🏦</div>
+                    <h3>Banking</h3>
+                    <p>Account comparisons, mobile banking, and getting the best from your bank</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">📈</div>
+                    <h3>Investing</h3>
+                    <p>Treasury bills, stocks, mutual funds, crypto, and real estate investing</p>
                 </div>
                 <div class="mission-card">
                     <div class="mission-icon">🛡️</div>
-                    <h3>Trust & Transparency</h3>
-                    <p>We're committed to being completely transparent. Winners are announced publicly, our terms are written in plain language, and we never share your personal data with third parties.</p>
+                    <h3>Insurance</h3>
+                    <p>Health insurance, car insurance, and protecting what matters</p>
                 </div>
                 <div class="mission-card">
-                    <div class="mission-icon">🇳🇬</div>
-                    <h3>Built for Nigerians</h3>
-                    <p>Everything we create is designed with Nigerian users in mind—from our content topics to our giveaway payouts via local bank transfer. We understand the unique financial landscape here.</p>
+                    <div class="mission-icon">💵</div>
+                    <h3>Money Management</h3>
+                    <p>Budgeting, saving strategies, and building financial security</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How Giveaway Works -->
-    <section class="content-section alt">
-        <div class="container">
-            <div class="section-header">
-                <h2>How the Giveaway Works</h2>
-                <p>Simple, transparent, and completely free to enter.</p>
-            </div>
-            
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3>Enter Your Email</h3>
-                    <p>Provide your email address to register for the weekly draw. Takes less than 30 seconds.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3>Wait for Sunday</h3>
-                    <p>Every Sunday, we use a certified random number generator to select one winner from all entries.</p>
-                </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3>Receive Your Cash</h3>
-                    <p>Winners are notified by email and receive ₦100,000 directly to their Nigerian bank account.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Values -->
+    <!-- Our Team -->
     <section class="content-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Our Values</h2>
-                <p>The principles that guide everything we do.</p>
-            </div>
+            <h2>Our Editorial Team</h2>
+            <p>Our content is created by experienced finance professionals with real-world expertise in Nigerian financial markets.</p>
             
-            <div class="values-list">
-                <div class="value-item">
-                    <div class="value-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
-                    </div>
-                    <div class="value-content">
-                        <h3>Integrity First</h3>
-                        <p>We do what we say. When we promise a ₦100,000 giveaway, we pay it. When we say entry is free, it truly is free.</p>
-                    </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-avatar">CO</div>
+                    <h3>Chioma Okonkwo</h3>
+                    <div class="team-role">Personal Finance Editor</div>
+                    <p class="team-bio">CFE certified with 8+ years covering banking and personal finance. Previously at Access Bank.</p>
                 </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                    </div>
-                    <div class="value-content">
-                        <h3>Complete Transparency</h3>
-                        <p>Our winner selection process is fair and random. We publicly announce winners and maintain clear, accessible terms and policies.</p>
-                    </div>
+                <div class="team-member">
+                    <div class="team-avatar">OA</div>
+                    <h3>Oluwaseun Adeyemi</h3>
+                    <div class="team-role">Investment Analyst</div>
+                    <p class="team-bio">CFA charterholder with 6+ years in financial markets. Previously at Stanbic IBTC Asset Management.</p>
                 </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    </div>
-                    <div class="value-content">
-                        <h3>User Privacy</h3>
-                        <p>Your personal information is secure with us. We never sell data to third parties and collect only what's necessary.</p>
-                    </div>
-                </div>
-                <div class="value-item">
-                    <div class="value-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <div class="value-content">
-                        <h3>Community Focus</h3>
-                        <p>Everything we do is for our Nigerian community. From our content to our giveaways, we're here to help you succeed financially.</p>
-                    </div>
+                <div class="team-member">
+                    <div class="team-avatar">FB</div>
+                    <h3>Folashade Babatunde</h3>
+                    <div class="team-role">Insurance Specialist</div>
+                    <p class="team-bio">CIIN certified with 10+ years in Nigerian insurance. Previously at AIICO Insurance.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="content-section alt">
+    <!-- Editorial Standards -->
+    <section class="content-section" style="background: var(--white);">
         <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Common questions about NaijaWins and our giveaway.</p>
-            </div>
+            <h2>Our Editorial Standards</h2>
+            <p>We take accuracy and integrity seriously. Every piece of content we publish follows strict editorial guidelines:</p>
             
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>Is NaijaWins legitimate?</h3>
-                    <p>Yes. NaijaWins is a legitimate platform. We've paid out over ₦1.2 million to winners, have clear terms and privacy policies, and use transparent winner selection. We're funded through advertising displayed on our site.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Is the giveaway really free?</h3>
-                    <p>100% free. We never ask for payment, credit card details, or any purchase. Entry requires only your email address and agreement to our terms.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How are winners selected?</h3>
-                    <p>Winners are selected randomly using a certified random number generator. Every valid entry has an equal chance of winning, regardless of when they entered.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How is NaijaWins funded?</h3>
-                    <p>We generate revenue through advertising displayed on our website. This allows us to offer valuable content and free giveaways while maintaining our operations.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Who can enter the giveaway?</h3>
-                    <p>The giveaway is open to Nigerian residents aged 18 and above with a valid Nigerian bank account. One entry per person per week.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How do winners receive their prize?</h3>
-                    <p>Winners are notified via email and asked to provide their Nigerian bank account details. Payment is sent via bank transfer within 24-48 hours of verification.</p>
-                </div>
-            </div>
+            <ul>
+                <li><strong>Fact-Checked:</strong> All information is verified against official sources including CBN, FIRS, and licensed financial institutions.</li>
+                <li><strong>Regularly Updated:</strong> We continuously update our guides to reflect the latest regulations and market changes.</li>
+                <li><strong>No Sponsored Rankings:</strong> Our comparisons and recommendations are based on objective criteria, not payments from financial institutions.</li>
+                <li><strong>Transparent Disclosures:</strong> When we use affiliate links, we clearly disclose this to our readers.</li>
+                <li><strong>Expert Review:</strong> Content is reviewed by qualified finance professionals before publication.</li>
+            </ul>
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Get Started?</h2>
-            <p>Explore our finance guides or enter this week's giveaway for a chance to win ₦100,000.</p>
-            <div class="cta-buttons">
-                <a href="/#giveaway" class="cta-btn cta-btn-primary">Enter Giveaway Free →</a>
-                <a href="blog.html" class="cta-btn cta-btn-secondary">Browse Articles</a>
-            </div>
+            <h2>Start Your Financial Journey</h2>
+            <p>Explore our guides and take control of your finances today.</p>
+            <a href="blog.html" class="cta-btn">Browse All Guides →</a>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo" style="color: white;">NaijaWins</div>
-                    <p>Nigeria's finance blog + free weekly cash giveaway.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Topics</h4>
-                    <a href="blog.html">All Articles</a>
-                    <a href="blog-loan-apps.html">Loans</a>
-                    <a href="blog-investment-beginners.html">Investing</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Pages</h4>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="/#giveaway">Giveaway</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms & Conditions</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 NaijaWins. All rights reserved.</p>
-                <p style="margin-top: 8px;">This promotion is not sponsored by or associated with any social media platform. No purchase necessary. Must be 18+ and a Nigerian resident.</p>
+            <p>© 2025 NaijaWins. All rights reserved.</p>
+            <div style="margin-top: 12px;">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact Us</a>
             </div>
         </div>
     </footer>

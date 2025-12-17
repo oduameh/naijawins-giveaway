@@ -3,206 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact NaijaWins support team. Get help with giveaway entries, ask questions about our finance content, or report issues.">
-    <title>Contact Us | NaijaWins Support</title>
+    
+    <title>Contact Us | NaijaWins - Nigeria Personal Finance</title>
+    <meta name="description" content="Get in touch with NaijaWins. Questions about our finance guides, editorial inquiries, or partnership opportunities.">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="canonical" href="https://naijawins.digital/contact.html">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3212022468120924" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         
         :root {
-            --green: #059669;
-            --green-dark: #047857;
-            --green-light: #10B981;
-            --orange: #F97316;
-            --dark: #111827;
-            --gray: #6B7280;
-            --light-gray: #F3F4F6;
+            --primary: #0F172A;
+            --secondary: #1E293B;
+            --accent: #0EA5E9;
+            --accent-dark: #0284C7;
+            --text: #334155;
+            --text-light: #64748B;
+            --border: #E2E8F0;
+            --bg: #F8FAFC;
             --white: #FFFFFF;
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--white);
-            color: var(--dark);
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
         }
         
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 20px; }
         
         /* Header */
         .header {
             background: var(--white);
-            border-bottom: 1px solid var(--light-gray);
+            border-bottom: 1px solid var(--border);
             padding: 16px 0;
             position: sticky;
             top: 0;
             z-index: 100;
         }
         
-        .header .container {
+        .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         .logo {
+            font-family: 'Merriweather', Georgia, serif;
             font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--green);
+            font-weight: 900;
+            color: var(--primary);
             text-decoration: none;
         }
         
-        .nav-links { display: flex; gap: 20px; align-items: center; }
+        .logo span { color: var(--accent); }
+        
+        .nav-links { display: flex; gap: 24px; }
         .nav-links a {
-            color: var(--gray);
+            color: var(--text);
             text-decoration: none;
             font-size: 0.875rem;
             font-weight: 500;
         }
-        .nav-links a:hover { color: var(--dark); }
-        .nav-links a.active { color: var(--green); }
+        .nav-links a:hover { color: var(--accent); }
         
-        .nav-dropdown { position: relative; }
-        .nav-dropdown-btn { cursor: pointer; display: flex; align-items: center; gap: 4px; color: var(--gray); font-size: 0.875rem; font-weight: 500; }
-        .nav-dropdown-menu {
-            position: absolute;
-            top: 100%;
-            right: 0;
-            background: white;
-            border: 1px solid var(--light-gray);
-            border-radius: 8px;
-            padding: 8px 0;
-            min-width: 160px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(8px);
-            transition: all 0.2s;
-        }
-        .nav-dropdown:hover .nav-dropdown-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        .nav-dropdown-menu a {
-            display: block;
-            padding: 8px 16px;
-        }
-        .nav-dropdown-menu a:hover { background: var(--light-gray); }
-        
-        .nav-giveaway {
-            background: var(--orange) !important;
-            color: white !important;
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-weight: 600 !important;
-        }
-        .nav-giveaway:hover { background: #EA580C !important; }
-        
-        /* Hero */
-        .page-hero {
-            background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
             padding: 64px 0;
             text-align: center;
         }
         
-        .page-hero h1 {
-            font-size: 2.5rem;
+        .page-header h1 {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 2.25rem;
             font-weight: 900;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
         }
         
-        .page-hero p {
-            font-size: 1.125rem;
-            color: var(--gray);
-            max-width: 500px;
-            margin: 0 auto;
+        .page-header p {
+            opacity: 0.9;
         }
         
-        /* Contact Grid */
+        /* Contact Content */
         .contact-section {
             padding: 64px 0;
         }
         
         .contact-grid {
             display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 48px;
         }
         
-        @media (min-width: 768px) {
-            .contact-grid { grid-template-columns: 1fr 1fr; }
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
         }
         
-        /* Contact Methods */
-        .contact-methods {
-            display: grid;
-            gap: 24px;
+        .contact-info h2 {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 24px;
         }
         
         .contact-method {
             display: flex;
             gap: 16px;
-            padding: 24px;
-            background: var(--light-gray);
+            margin-bottom: 24px;
+            padding: 20px;
+            background: var(--white);
             border-radius: 12px;
+            border: 1px solid var(--border);
         }
         
         .contact-icon {
             width: 48px;
             height: 48px;
-            background: var(--green);
+            background: var(--bg);
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.5rem;
             flex-shrink: 0;
         }
         
-        .contact-icon svg { color: white; }
-        
         .contact-method h3 {
             font-size: 1rem;
-            font-weight: 700;
+            color: var(--primary);
             margin-bottom: 4px;
         }
         
         .contact-method p {
             font-size: 0.875rem;
-            color: var(--gray);
-            margin-bottom: 8px;
+            color: var(--text-light);
+            margin: 0;
         }
         
         .contact-method a {
-            color: var(--green);
+            color: var(--accent);
             text-decoration: none;
-            font-weight: 500;
         }
         
-        .contact-method a:hover { text-decoration: underline; }
-        
         /* Contact Form */
-        .form-card {
-            background: white;
-            border: 2px solid var(--light-gray);
+        .contact-form {
+            background: var(--white);
+            border: 1px solid var(--border);
             border-radius: 16px;
             padding: 32px;
         }
         
-        .form-card h2 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        
-        .form-card > p {
-            color: var(--gray);
+        .contact-form h2 {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 1.25rem;
+            color: var(--primary);
             margin-bottom: 24px;
         }
         
@@ -214,381 +179,239 @@
             display: block;
             font-size: 0.875rem;
             font-weight: 600;
+            color: var(--primary);
             margin-bottom: 8px;
         }
         
         .form-group input,
-        .form-group select,
-        .form-group textarea {
+        .form-group textarea,
+        .form-group select {
             width: 100%;
-            padding: 14px 16px;
-            font-size: 1rem;
-            border: 2px solid var(--light-gray);
+            padding: 12px 16px;
+            border: 1px solid var(--border);
             border-radius: 8px;
+            font-size: 1rem;
             font-family: inherit;
             transition: border-color 0.2s;
-            background: white;
         }
         
         .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
+        .form-group textarea:focus,
+        .form-group select:focus {
             outline: none;
-            border-color: var(--green);
+            border-color: var(--accent);
         }
         
-        .form-group textarea { resize: vertical; min-height: 120px; }
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
         
         .submit-btn {
             width: 100%;
-            background: var(--green);
-            color: white;
-            font-size: 1rem;
-            font-weight: 700;
-            padding: 16px;
+            background: var(--accent);
+            color: var(--white);
             border: none;
+            padding: 14px;
             border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
             cursor: pointer;
-            font-family: inherit;
             transition: background 0.2s;
         }
         
-        .submit-btn:hover { background: var(--green-dark); }
+        .submit-btn:hover { background: var(--accent-dark); }
         
-        /* FAQ Section */
+        /* FAQ */
         .faq-section {
-            padding: 64px 0;
-            background: var(--light-gray);
+            padding: 48px 0;
+            background: var(--white);
         }
         
-        .section-header {
+        .faq-section h2 {
+            font-family: 'Merriweather', Georgia, serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 32px;
             text-align: center;
-            margin-bottom: 48px;
-        }
-        
-        .section-header h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 8px;
-        }
-        
-        .section-header p {
-            color: var(--gray);
-        }
-        
-        .faq-grid {
-            display: grid;
-            gap: 16px;
-            max-width: 800px;
-            margin: 0 auto;
         }
         
         .faq-item {
-            background: white;
-            border-radius: 12px;
-            padding: 24px;
+            border-bottom: 1px solid var(--border);
+            padding: 20px 0;
         }
         
         .faq-item h3 {
             font-size: 1rem;
-            font-weight: 600;
+            color: var(--primary);
             margin-bottom: 8px;
         }
         
         .faq-item p {
-            font-size: 0.9375rem;
-            color: var(--gray);
-        }
-        
-        /* Warning Box */
-        .warning-section {
-            padding: 64px 0;
-        }
-        
-        .warning-box {
-            background: #FEF2F2;
-            border: 2px solid #FCA5A5;
-            border-radius: 16px;
-            padding: 32px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .warning-box h2 {
-            color: #DC2626;
-            font-size: 1.25rem;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .warning-box ul {
-            margin: 16px 0;
-            padding-left: 24px;
-        }
-        
-        .warning-box li {
-            margin-bottom: 8px;
-            color: #7F1D1D;
-        }
-        
-        .warning-box p {
-            color: #7F1D1D;
+            font-size: 0.875rem;
+            color: var(--text-light);
+            margin: 0;
         }
         
         /* Footer */
         .footer {
-            background: var(--dark);
-            color: white;
-            padding: 48px 0 24px;
-        }
-        
-        .footer-content {
-            display: grid;
-            gap: 32px;
-            margin-bottom: 32px;
-        }
-        
-        @media (min-width: 640px) {
-            .footer-content { grid-template-columns: 2fr 1fr 1fr 1fr; }
-        }
-        
-        .footer-brand p {
+            background: var(--secondary);
             color: rgba(255,255,255,0.6);
-            font-size: 0.875rem;
-            margin-top: 8px;
+            padding: 32px 0;
+            text-align: center;
         }
         
-        .footer-links h4 {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 12px;
-            color: rgba(255,255,255,0.5);
-        }
-        
-        .footer-links a {
-            display: block;
+        .footer a {
             color: rgba(255,255,255,0.8);
             text-decoration: none;
-            font-size: 0.875rem;
-            margin-bottom: 8px;
-        }
-        
-        .footer-links a:hover { color: white; }
-        
-        .footer-bottom {
-            padding-top: 24px;
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            font-size: 0.75rem;
-            color: rgba(255,255,255,0.5);
+            margin: 0 12px;
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <a href="/" class="logo">NaijaWins</a>
+        <div class="header-inner">
+            <a href="/" class="logo">Naija<span>Wins</span></a>
             <nav class="nav-links">
-                <a href="blog.html">Blog</a>
+                <a href="/">Home</a>
+                <a href="blog.html">Guides</a>
                 <a href="about.html">About</a>
-                <a href="contact.html" class="active">Contact</a>
-                <div class="nav-dropdown">
-                    <span class="nav-dropdown-btn">Legal <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span>
-                    <div class="nav-dropdown-menu">
-                        <a href="privacy.html">Privacy Policy</a>
-                        <a href="terms.html">Terms & Conditions</a>
-                    </div>
-                </div>
-                <a href="/#giveaway" class="nav-giveaway">Win ₦100K →</a>
+                <a href="contact.html">Contact</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero -->
-    <section class="page-hero">
+    <section class="page-header">
         <div class="container">
             <h1>Contact Us</h1>
-            <p>Have a question? We're here to help. Get in touch with our support team.</p>
+            <p>Have a question or feedback? We'd love to hear from you.</p>
         </div>
     </section>
 
-    <!-- Contact Grid -->
     <section class="contact-section">
-        <div class="container">
+        <div class="container" style="max-width: 1000px;">
             <div class="contact-grid">
-                <!-- Contact Methods -->
-                <div>
-                    <h2 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 24px;">Get in Touch</h2>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                    <polyline points="22,6 12,13 2,6"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3>Email Support</h3>
-                                <p>For general inquiries and giveaway questions</p>
-                                <a href="mailto:support@naijawins.digital">support@naijawins.digital</a>
-                            </div>
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:hello@naijawins.digital">hello@naijawins.digital</a></p>
                         </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-icon" style="background: #7C3AED;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3>Privacy Inquiries</h3>
-                                <p>For data and privacy-related questions</p>
-                                <a href="mailto:privacy@naijawins.digital">privacy@naijawins.digital</a>
-                            </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">📝</div>
+                        <div>
+                            <h3>Editorial Inquiries</h3>
+                            <p><a href="mailto:editorial@naijawins.digital">editorial@naijawins.digital</a></p>
                         </div>
-                        
-                        <div class="contact-method">
-                            <div class="contact-icon" style="background: var(--orange);">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <path d="M12 6v6l4 2"/>
-                                </svg>
-                            </div>
-                            <div>
-                                <h3>Response Time</h3>
-                                <p>We typically respond within 24-48 hours during business days (Monday-Friday).</p>
-                            </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">🤝</div>
+                        <div>
+                            <h3>Partnerships</h3>
+                            <p><a href="mailto:partners@naijawins.digital">partners@naijawins.digital</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">⏰</div>
+                        <div>
+                            <h3>Response Time</h3>
+                            <p>We typically respond within 24-48 hours</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Contact Form -->
-                <div class="form-card">
+                <div class="contact-form">
                     <h2>Send a Message</h2>
-                    <p>Fill out the form and we'll get back to you.</p>
-                    
                     <form id="contact-form">
                         <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required placeholder="you@example.com">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <select id="subject" name="subject" required>
-                                <option value="">Select a topic</option>
-                                <option value="giveaway">Giveaway Question</option>
-                                <option value="winner">Winner Inquiry</option>
-                                <option value="content">Blog/Content Feedback</option>
-                                <option value="technical">Technical Issue</option>
-                                <option value="privacy">Privacy Concern</option>
-                                <option value="other">Other</option>
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="general">General Inquiry</option>
+                                <option value="editorial">Editorial Question</option>
+                                <option value="correction">Request a Correction</option>
+                                <option value="partnership">Partnership Opportunity</option>
+                                <option value="feedback">Feedback</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
-                            <label for="message">Your Message *</label>
-                            <textarea id="message" name="message" required placeholder="Please describe your question or issue..."></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
                         </div>
-                        
-                        <button type="submit" class="submit-btn">Send Message →</button>
+                        <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Common Questions</h2>
-                <p>Quick answers before you contact us</p>
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How can I suggest a topic for an article?</h3>
+                <p>We welcome topic suggestions! Send your ideas to editorial@naijawins.digital and our team will review them.</p>
             </div>
             
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>How do I know if I won?</h3>
-                    <p>Winners are notified via the email address used to enter. Check your inbox (and spam folder) after the Sunday draw at 6:00 PM WAT.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>I didn't receive a confirmation email</h3>
-                    <p>Check your spam or junk folder. If you still can't find it, try entering again with the same email address.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How do I receive my prize?</h3>
-                    <p>Winners are contacted via email with instructions to provide their Nigerian bank account details for direct transfer within 24-48 hours.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can I enter from outside Nigeria?</h3>
-                    <p>The giveaway is currently only open to residents of Nigeria with a valid Nigerian bank account.</p>
-                </div>
+            <div class="faq-item">
+                <h3>I found an error in one of your articles. How do I report it?</h3>
+                <p>We appreciate corrections! Please use the contact form above and select "Request a Correction" as the subject.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Warning Section -->
-    <section class="warning-section">
-        <div class="container">
-            <div class="warning-box">
-                <h2>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                        <line x1="12" y1="9" x2="12" y2="13"/>
-                        <line x1="12" y1="17" x2="12.01" y2="17"/>
-                    </svg>
-                    Protect Yourself from Scams
-                </h2>
-                <p>NaijaWins will <strong>NEVER</strong> ask you to:</p>
-                <ul>
-                    <li>Pay any fee to claim a prize</li>
-                    <li>Share your bank login credentials or passwords</li>
-                    <li>Send money to "release" your winnings</li>
-                    <li>Click on suspicious links in emails or WhatsApp</li>
-                    <li>Provide OTPs or PINs</li>
-                </ul>
-                <p style="margin-top: 16px;"><strong>If you receive any communication asking for these things, it is a scam.</strong> Please report it to us immediately at support@naijawins.digital.</p>
+            
+            <div class="faq-item">
+                <h3>Do you accept guest posts?</h3>
+                <p>We occasionally accept guest contributions from qualified finance professionals. Please contact us with your credentials and topic ideas.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How do you make money?</h3>
+                <p>NaijaWins is supported by advertising displayed on our site. This allows us to provide free access to all our guides and resources.</p>
             </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <div class="logo" style="color: white;">NaijaWins</div>
-                    <p>Nigeria's finance blog + free weekly cash giveaway.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Topics</h4>
-                    <a href="blog.html">All Articles</a>
-                    <a href="blog-loan-apps.html">Loans</a>
-                    <a href="blog-investment-beginners.html">Investing</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Pages</h4>
-                    <a href="about.html">About</a>
-                    <a href="contact.html">Contact</a>
-                    <a href="/#giveaway">Giveaway</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms & Conditions</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2025 NaijaWins. All rights reserved.</p>
+            <p>© 2025 NaijaWins. All rights reserved.</p>
+            <div style="margin-top: 12px;">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
             </div>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                btn.textContent = '✓ Message Sent!';
+                this.reset();
+                setTimeout(() => {
+                    btn.textContent = 'Send Message';
+                    btn.disabled = false;
+                }, 3000);
+            }, 1000);
+        });
+    </script>
 </body>
 </html>
