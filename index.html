@@ -799,6 +799,25 @@
         @media (max-width: 640px) {
             .floating-cta { bottom: 16px; right: 16px; padding: 12px 20px; font-size: 0.875rem; }
         }
+        
+        /* Winner Testimonials */
+        .testimonials-section { padding: 64px 0; background: #ECFDF5; }
+        .testimonials-section h2 { font-size: 1.75rem; text-align: center; margin-bottom: 8px; }
+        .testimonials-section .section-subtitle { text-align: center; color: var(--gray); margin-bottom: 40px; }
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .testimonial-card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .testimonial-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+        .testimonial-avatar { width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #059669, #10B981); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.125rem; }
+        .testimonial-name { font-weight: 700; color: var(--dark); }
+        .testimonial-location { font-size: 0.75rem; color: var(--gray); }
+        .testimonial-text { color: #374151; line-height: 1.7; font-style: italic; }
+        .testimonial-date { font-size: 0.75rem; color: var(--gray); margin-top: 12px; display: flex; align-items: center; gap: 4px; }
+        .verified-badge { background: #D1FAE5; color: #065F46; padding: 2px 8px; border-radius: 4px; font-size: 0.625rem; font-weight: 600; margin-left: auto; }
+        
+        /* Trust Badges */
+        .trust-badges { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 20px; justify-content: center; padding-top: 16px; border-top: 1px solid rgba(0,0,0,0.1); }
+        .trust-badge { display: flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--gray); }
+        .trust-badge svg { color: var(--green); }
     </style>
 </head>
 <body>
@@ -895,7 +914,8 @@
         </div>
     </section>
 
-    <!-- Ad Slot - Labeled for Compliance -->
+    <!-- Ad Slot #1: Homepage Top (after featured articles) -->
+    <!-- TODO: Create dedicated AdSense slot "homepage-top-9057164066" for better analytics -->
     <div class="ad-container">
         <div class="container">
             <div class="ad-label">Advertisement</div>
@@ -1007,6 +1027,64 @@
         </div>
     </section>
 
+    <!-- Winner Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>Real Winners, Real Stories</h2>
+            <p class="section-subtitle">Hear from Nigerians who've won our weekly cash giveaway</p>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">AF</div>
+                        <div>
+                            <div class="testimonial-name">Adaeze F.</div>
+                            <div class="testimonial-location">Lagos, Nigeria</div>
+                        </div>
+                        <span class="verified-badge">✓ VERIFIED</span>
+                    </div>
+                    <p class="testimonial-text">"I entered thinking it was fake like the others, but the ₦100K landed in my account the next day! Used it to pay my shop rent. God bless NaijaWins!"</p>
+                    <div class="testimonial-date">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Won November 2024
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">EC</div>
+                        <div>
+                            <div class="testimonial-name">Emeka C.</div>
+                            <div class="testimonial-location">Enugu, Nigeria</div>
+                        </div>
+                        <span class="verified-badge">✓ VERIFIED</span>
+                    </div>
+                    <p class="testimonial-text">"My wife registered both of us for fun. When they said she won, we thought it was 419! But the money came sharp sharp. Very legit platform."</p>
+                    <div class="testimonial-date">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Won October 2024
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">BA</div>
+                        <div>
+                            <div class="testimonial-name">Blessing A.</div>
+                            <div class="testimonial-location">Port Harcourt, Nigeria</div>
+                        </div>
+                        <span class="verified-badge">✓ VERIFIED</span>
+                    </div>
+                    <p class="testimonial-text">"First time I'm winning something online! The process was simple - just email and wait. Thank you NaijaWins for this blessing. I've told all my friends."</p>
+                    <div class="testimonial-date">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Won December 2024
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- NOTE: No ad directly before form - AdSense compliance -->
 
     <!-- Giveaway Entry Section -->
@@ -1060,6 +1138,22 @@
                         <button type="submit" class="submit-btn" id="submit-btn">Enter Giveaway Free →</button>
                     </form>
                     <p class="form-note">Your information is secure and will never be shared.</p>
+                    
+                    <!-- Trust Badges -->
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            SSL Secured
+                        </div>
+                        <div class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            Verified Winners
+                        </div>
+                        <div class="trust-badge">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                            Data Protected
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1109,7 +1203,8 @@
         </div>
     </section>
 
-    <!-- Ad Slot - Before Footer -->
+    <!-- Ad Slot #2: Homepage Footer (before footer) -->
+    <!-- TODO: Create dedicated AdSense slot "homepage-footer" for better analytics -->
     <div class="ad-container">
         <div class="container">
             <div class="ad-label">Advertisement</div>

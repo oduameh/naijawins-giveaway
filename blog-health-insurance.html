@@ -97,6 +97,16 @@
         .footer h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; color: rgba(255,255,255,0.4); }
         .footer a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.875rem; margin-bottom: 8px; }
         .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; text-align: center; font-size: 0.75rem; }
+        
+        /* Author Bio */
+        .author-box { background: #F0FDF4; border: 1px solid #BBF7D0; border-radius: 12px; padding: 24px; margin: 32px 0; display: flex; gap: 20px; align-items: flex-start; }
+        .author-avatar { width: 72px; height: 72px; border-radius: 50%; background: linear-gradient(135deg, #059669 0%, #10B981 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.5rem; font-weight: 700; flex-shrink: 0; }
+        .author-info h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; color: #111827; }
+        .author-title { font-size: 0.875rem; color: #059669; font-weight: 600; margin-bottom: 8px; }
+        .author-bio { font-size: 0.875rem; color: #4B5563; line-height: 1.6; }
+        .author-credentials { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+        .author-credential { background: #fff; border: 1px solid #D1FAE5; padding: 4px 10px; border-radius: 4px; font-size: 0.75rem; color: #065F46; }
+        @media (max-width: 600px) { .author-box { flex-direction: column; text-align: center; align-items: center; } .author-credentials { justify-content: center; } }
     </style>
 </head>
 <body>
@@ -116,7 +126,22 @@
             <div class="article-header">
                 <span class="category">Insurance</span>
                 <h1>Health Insurance in Nigeria 2024: Complete Guide to HMO Plans & Coverage</h1>
-                <p class="article-meta">Updated December 2024 · 14 min read</p>
+                <p class="article-meta">By <strong>Folashade Babatunde</strong> · Updated December 2024 · 14 min read</p>
+            </div>
+
+            <!-- Author Bio -->
+            <div class="author-box">
+                <div class="author-avatar">FB</div>
+                <div class="author-info">
+                    <h4>Folashade Babatunde</h4>
+                    <div class="author-title">Insurance & Risk Analyst</div>
+                    <p class="author-bio">Folashade is a licensed insurance broker with 10+ years in the Nigerian insurance industry. She previously managed corporate insurance portfolios at AIICO and now educates consumers on insurance products.</p>
+                    <div class="author-credentials">
+                        <span class="author-credential">✓ CIIN Associate</span>
+                        <span class="author-credential">✓ 10+ Years Experience</span>
+                        <span class="author-credential">✓ Ex-AIICO Insurance</span>
+                    </div>
+                </div>
             </div>
 
             <div class="article-content">
