@@ -1,0 +1,12 @@
+# NaijaWins Robots.txt
+# https://naijawins.digital
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://naijawins.digital/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
