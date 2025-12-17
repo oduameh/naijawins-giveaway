@@ -833,8 +833,8 @@
             </div>
             <div class="giveaway-stats">
                 <div>
-                    <div class="stat-value" id="entries-count">4,892</div>
-                    <div class="stat-label">Entries</div>
+                    <div class="stat-value">₦100K</div>
+                    <div class="stat-label">Weekly Prize</div>
                 </div>
                 <div>
                     <div class="stat-value" id="countdown-days">4</div>
@@ -1162,23 +1162,13 @@
     </a>
 
     <script>
-        // Dynamic entry count
-        const entriesEl = document.getElementById('entries-count');
-        let count = 4892;
-        setInterval(() => {
-            if (Math.random() > 0.7) {
-                count += Math.floor(Math.random() * 3) + 1;
-                entriesEl.textContent = count.toLocaleString();
-            }
-        }, 3000);
-        
-        // Countdown
+        // Countdown to Sunday draw (this is real/accurate)
         const countdownEl = document.getElementById('countdown-days');
         const today = new Date();
         const sunday = new Date(today);
-        sunday.setDate(today.getDate() + (7 - today.getDay()));
+        sunday.setDate(today.getDate() + (7 - today.getDay()) % 7 || 7);
         const daysLeft = Math.ceil((sunday - today) / (1000 * 60 * 60 * 24));
-        countdownEl.textContent = daysLeft;
+        countdownEl.textContent = daysLeft === 0 ? 'Today!' : daysLeft;
         
         // Form handling
         const form = document.getElementById('giveaway-form');
