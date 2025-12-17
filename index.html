@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Win ₦100,000 Cash! Enter our free weekly giveaway. No purchase necessary. Open to all Nigerians.">
+    <meta name="description" content="NaijaWins - Nigeria's top finance blog. Money tips, loans, investing, savings guides + FREE weekly ₦100,000 cash giveaway!">
+    <meta name="keywords" content="Nigeria finance blog, money tips Nigeria, loans Nigeria, investing, savings, free giveaway Nigeria">
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Win ₦100,000 Cash - Free Weekly Giveaway">
-    <meta property="og:description" content="Enter now for a chance to win ₦100,000 cash! Winners announced every Sunday.">
+    <meta property="og:title" content="NaijaWins - Finance Tips + Free ₦100K Weekly Giveaway">
+    <meta property="og:description" content="Nigeria's finance blog with practical money tips. Plus enter our free weekly giveaway to win ₦100,000!">
     <meta property="og:url" content="https://naijawins.digital">
     
-    <title>Win ₦100,000 Cash | Free Weekly Giveaway for Nigerians</title>
+    <title>NaijaWins - Nigeria Finance Blog + Free Weekly ₦100K Giveaway</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3212022468120924"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3212022468120924" crossorigin="anonymous"></script>
     
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,7 +44,8 @@
             -webkit-font-smoothing: antialiased;
         }
         
-        .container { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 20px; }
         
         /* Header */
         .header {
@@ -63,13 +64,13 @@
         }
         
         .logo {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: var(--green);
             text-decoration: none;
         }
         
-        .nav-links { display: flex; gap: 24px; }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
         .nav-links a {
             color: var(--gray);
             text-decoration: none;
@@ -78,208 +79,437 @@
         }
         .nav-links a:hover { color: var(--dark); }
         
-        /* Hero */
-        .hero {
-            background: linear-gradient(180deg, #ECFDF5 0%, #FFFFFF 100%);
-            padding: 48px 0 32px;
-            text-align: center;
-        }
-        
-        .hero-badge {
-            display: inline-block;
-            background: var(--green);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 700;
-            padding: 6px 16px;
+        .nav-giveaway {
+            background: var(--orange) !important;
+            color: white !important;
+            padding: 8px 16px;
             border-radius: 50px;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-weight: 600 !important;
         }
+        .nav-giveaway:hover { background: var(--orange-dark) !important; }
         
-        .hero h1 {
-            font-size: 2.5rem;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 16px;
-            color: var(--dark);
-        }
-        
-        .hero h1 span {
-            color: var(--green);
-        }
-        
-        @media (min-width: 640px) {
-            .hero h1 { font-size: 3.5rem; }
-        }
-        
-        .hero-text {
-            font-size: 1.125rem;
-            color: var(--gray);
-            margin-bottom: 32px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .prize-box {
-            background: var(--dark);
+        /* Giveaway Banner - UNMISSABLE */
+        .giveaway-banner {
+            background: linear-gradient(135deg, var(--dark) 0%, #1F2937 100%);
             color: white;
-            padding: 24px 32px;
-            border-radius: 16px;
-            display: inline-block;
-            margin-bottom: 32px;
+            padding: 20px 0;
+            position: relative;
+            overflow: hidden;
         }
         
-        .prize-label {
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            opacity: 0.7;
-            margin-bottom: 4px;
+        .giveaway-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
         }
         
-        .prize-amount {
-            font-size: 3rem;
+        .giveaway-banner .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+            position: relative;
+        }
+        
+        .giveaway-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .giveaway-icon {
+            width: 56px;
+            height: 56px;
+            background: var(--orange);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+        
+        .giveaway-text h2 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        
+        .giveaway-text p {
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+        
+        .giveaway-amount {
+            font-size: 1.75rem;
             font-weight: 900;
             color: var(--green-light);
         }
         
-        .stats-row {
+        .giveaway-stats {
             display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-bottom: 32px;
-            flex-wrap: wrap;
-        }
-        
-        .stat {
+            gap: 24px;
             text-align: center;
         }
         
-        .stat-number {
-            font-size: 1.5rem;
+        .giveaway-stats .stat-value {
+            font-size: 1.25rem;
             font-weight: 800;
-            color: var(--dark);
         }
         
-        .stat-label {
-            font-size: 0.75rem;
-            color: var(--gray);
+        .giveaway-stats .stat-label {
+            font-size: 0.7rem;
             text-transform: uppercase;
+            opacity: 0.7;
         }
         
-        .cta-button {
-            display: inline-block;
+        .giveaway-cta {
             background: var(--orange);
             color: white;
-            font-size: 1.125rem;
-            font-weight: 700;
-            padding: 16px 48px;
+            padding: 14px 28px;
             border-radius: 50px;
             text-decoration: none;
-            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
+            font-weight: 700;
+            font-size: 0.9375rem;
+            white-space: nowrap;
             transition: all 0.2s;
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
         }
         
-        .cta-button:hover {
+        .giveaway-cta:hover {
             background: var(--orange-dark);
             transform: translateY(-2px);
-            box-shadow: 0 6px 24px rgba(249, 115, 22, 0.5);
         }
         
-        /* Content Sections */
-        .section {
+        @media (max-width: 768px) {
+            .giveaway-banner .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .giveaway-info { flex-direction: column; }
+            .giveaway-stats { margin: 16px 0; }
+        }
+        
+        /* Hero Blog Section */
+        .blog-hero {
             padding: 48px 0;
-            border-bottom: 1px solid var(--light-gray);
+            background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);
         }
         
-        .section-dark {
-            background: var(--dark);
-            color: white;
-            border: none;
-        }
-        
-        .section h2 {
-            font-size: 1.75rem;
-            font-weight: 800;
-            margin-bottom: 24px;
+        .blog-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 8px;
             text-align: center;
         }
         
-        .section-subtitle {
+        .blog-hero h1 span { color: var(--green); }
+        
+        .blog-hero-subtitle {
             text-align: center;
             color: var(--gray);
-            margin-bottom: 32px;
+            font-size: 1.125rem;
+            margin-bottom: 40px;
         }
         
-        .section-dark .section-subtitle {
-            color: rgba(255,255,255,0.7);
-        }
-        
-        /* How It Works */
-        .steps {
+        /* Featured Articles Grid */
+        .featured-grid {
             display: grid;
             gap: 24px;
         }
         
-        @media (min-width: 640px) {
-            .steps { grid-template-columns: repeat(3, 1fr); }
+        @media (min-width: 768px) {
+            .featured-grid { grid-template-columns: 1fr 1fr; }
+            .featured-grid .article-card:first-child { grid-column: span 2; }
+            .featured-grid .article-card:first-child .article-image { height: 280px; }
+            .featured-grid .article-card:first-child h3 { font-size: 1.5rem; }
         }
         
-        .step {
-            text-align: center;
-            padding: 24px;
-            background: var(--light-gray);
-            border-radius: 12px;
+        .article-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: all 0.2s;
         }
         
-        .step-number {
-            width: 40px;
-            height: 40px;
-            background: var(--green);
-            color: white;
+        .article-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+        
+        .article-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .article-image {
+            height: 180px;
+            display: flex;
+            align-items: flex-start;
+            padding: 16px;
+            position: relative;
+        }
+        
+        .article-category {
+            background: white;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: 50px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .article-content {
+            padding: 20px;
+        }
+        
+        .article-content h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 8px;
+        }
+        
+        .article-content p {
+            font-size: 0.875rem;
+            color: var(--gray);
+            margin-bottom: 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .article-meta {
+            font-size: 0.75rem;
+            color: #9CA3AF;
+        }
+        
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid var(--light-gray);
+        }
+        
+        .section-header h2 {
+            font-size: 1.5rem;
             font-weight: 800;
-            border-radius: 50%;
+        }
+        
+        .section-header a {
+            color: var(--green);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        
+        /* Content Section */
+        .content-section {
+            padding: 48px 0;
+        }
+        
+        .content-section.alt { background: var(--light-gray); }
+        
+        /* Article List */
+        .article-list {
+            display: grid;
+            gap: 16px;
+        }
+        
+        .article-list-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            background: white;
+            border-radius: 12px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
+            border: 1px solid transparent;
+        }
+        
+        .article-list-item:hover {
+            border-color: var(--green);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        
+        .article-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 16px;
         }
         
-        .step h3 {
+        .article-thumb svg { color: white; }
+        
+        .article-list-content h3 {
             font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 8px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            line-height: 1.3;
         }
         
-        .step p {
-            font-size: 0.875rem;
+        .article-list-content p {
+            font-size: 0.8125rem;
             color: var(--gray);
+            margin-bottom: 6px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
         
-        /* Entry Form */
-        .entry-section {
-            background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
-            padding: 64px 0;
+        .article-list-content .meta {
+            font-size: 0.75rem;
+            color: #9CA3AF;
         }
         
-        .entry-card {
+        /* Category Grid */
+        .category-grid {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        @media (min-width: 768px) {
+            .category-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        .category-card {
             background: white;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.2s;
             border: 2px solid var(--light-gray);
+        }
+        
+        .category-card:hover {
+            border-color: var(--green);
+            transform: translateY(-2px);
+        }
+        
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            font-size: 1.5rem;
+        }
+        
+        .category-card h3 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+        }
+        
+        .category-card p {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-top: 4px;
+        }
+        
+        /* Ad Container */
+        .ad-container {
+            padding: 24px 0;
+            background: var(--light-gray);
+        }
+        
+        /* Giveaway Entry Section */
+        .giveaway-section {
+            background: linear-gradient(135deg, var(--dark) 0%, #1F2937 100%);
+            padding: 64px 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .giveaway-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        
+        .giveaway-content {
+            position: relative;
+            display: grid;
+            gap: 48px;
+            align-items: center;
+        }
+        
+        @media (min-width: 768px) {
+            .giveaway-content { grid-template-columns: 1fr 1fr; }
+        }
+        
+        .giveaway-details h2 {
+            font-size: 2.25rem;
+            font-weight: 900;
+            margin-bottom: 16px;
+        }
+        
+        .giveaway-details h2 span { color: var(--green-light); }
+        
+        .giveaway-details > p {
+            font-size: 1.125rem;
+            opacity: 0.9;
+            margin-bottom: 24px;
+        }
+        
+        .giveaway-perks {
+            list-style: none;
+        }
+        
+        .giveaway-perks li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+        
+        .giveaway-perks li svg {
+            color: var(--green-light);
+            flex-shrink: 0;
+        }
+        
+        .entry-form-card {
+            background: white;
             border-radius: 16px;
             padding: 32px;
-            max-width: 480px;
-            margin: 0 auto;
+            color: var(--dark);
         }
         
-        .entry-card h2 {
+        .entry-form-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 4px;
             text-align: center;
-            margin-bottom: 8px;
         }
         
-        .entry-card > p {
+        .entry-form-card > p {
             text-align: center;
             color: var(--gray);
             margin-bottom: 24px;
@@ -326,13 +556,11 @@
         }
         
         .checkbox-row label {
-            font-size: 0.875rem;
+            font-size: 0.8125rem;
             color: var(--gray);
         }
         
-        .checkbox-row a {
-            color: var(--green);
-        }
+        .checkbox-row a { color: var(--green); }
         
         .submit-btn {
             width: 100%;
@@ -348,184 +576,13 @@
             transition: background 0.2s;
         }
         
-        .submit-btn:hover {
-            background: var(--orange-dark);
-        }
+        .submit-btn:hover { background: var(--orange-dark); }
         
         .form-note {
             text-align: center;
             font-size: 0.75rem;
             color: var(--gray);
             margin-top: 16px;
-        }
-        
-        /* Ad Container */
-        .ad-container {
-            padding: 24px 0;
-            background: var(--light-gray);
-        }
-        
-        /* Winners */
-        .winners-grid {
-            display: grid;
-            gap: 16px;
-        }
-        
-        @media (min-width: 640px) {
-            .winners-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        
-        .winner-card {
-            background: white;
-            border: 1px solid var(--light-gray);
-            border-radius: 12px;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        
-        .section-dark .winner-card {
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(255,255,255,0.1);
-        }
-        
-        .winner-avatar {
-            width: 48px;
-            height: 48px;
-            background: var(--green);
-            color: white;
-            font-weight: 700;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .winner-info h4 {
-            font-size: 0.9375rem;
-            font-weight: 600;
-        }
-        
-        .winner-info p {
-            font-size: 0.8125rem;
-            color: var(--gray);
-        }
-        
-        .section-dark .winner-info p {
-            color: rgba(255,255,255,0.6);
-        }
-        
-        .winner-info .amount {
-            color: var(--green-light);
-            font-weight: 600;
-        }
-        
-        /* FAQ */
-        .faq-list {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        .faq-item {
-            border-bottom: 1px solid var(--light-gray);
-        }
-        
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 20px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1rem;
-            font-weight: 600;
-            text-align: left;
-            cursor: pointer;
-            font-family: inherit;
-        }
-        
-        .faq-question svg {
-            flex-shrink: 0;
-            color: var(--gray);
-            transition: transform 0.2s;
-        }
-        
-        .faq-item.open .faq-question svg {
-            transform: rotate(180deg);
-        }
-        
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s;
-        }
-        
-        .faq-item.open .faq-answer {
-            max-height: 200px;
-        }
-        
-        .faq-answer p {
-            padding-bottom: 20px;
-            color: var(--gray);
-            font-size: 0.9375rem;
-        }
-        
-        /* Blog Preview */
-        .blog-list {
-            display: grid;
-            gap: 16px;
-        }
-        
-        .blog-item {
-            display: flex;
-            gap: 16px;
-            padding: 16px;
-            background: var(--light-gray);
-            border-radius: 12px;
-            text-decoration: none;
-            color: inherit;
-            transition: background 0.2s;
-        }
-        
-        .blog-item:hover {
-            background: #E5E7EB;
-        }
-        
-        .blog-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--green);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        
-        .blog-icon svg {
-            color: white;
-        }
-        
-        .blog-item h3 {
-            font-size: 0.9375rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        
-        .blog-item p {
-            font-size: 0.8125rem;
-            color: var(--gray);
-        }
-        
-        .view-all {
-            display: block;
-            text-align: center;
-            margin-top: 24px;
-            color: var(--green);
-            font-weight: 600;
-            text-decoration: none;
         }
         
         /* Footer */
@@ -542,7 +599,7 @@
         }
         
         @media (min-width: 640px) {
-            .footer-content { grid-template-columns: 2fr 1fr 1fr; }
+            .footer-content { grid-template-columns: 2fr 1fr 1fr 1fr; }
         }
         
         .footer-brand p {
@@ -577,11 +634,37 @@
             color: rgba(255,255,255,0.5);
         }
         
-        .footer-disclaimer {
-            margin-top: 12px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+        /* Floating Giveaway Button */
+        .floating-cta {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: var(--orange);
+            color: white;
+            padding: 16px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.5);
+            z-index: 99;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: pulse 2s infinite;
+        }
+        
+        .floating-cta:hover {
+            background: var(--orange-dark);
+            transform: scale(1.05);
+        }
+        
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(249, 115, 22, 0.5); }
+            50% { box-shadow: 0 4px 30px rgba(249, 115, 22, 0.8); }
+        }
+        
+        @media (max-width: 640px) {
+            .floating-cta { bottom: 16px; right: 16px; padding: 12px 20px; font-size: 0.875rem; }
         }
     </style>
 </head>
@@ -590,139 +673,84 @@
         <div class="container">
             <a href="/" class="logo">NaijaWins</a>
             <nav class="nav-links">
-                <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
+                <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
+                <a href="#giveaway" class="nav-giveaway">Win ₦100K →</a>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
+    <!-- Giveaway Banner - Always Visible -->
+    <div class="giveaway-banner">
         <div class="container">
-            <span class="hero-badge">Free Entry • Weekly Draws</span>
-            <h1>Win <span>₦100,000</span> Cash Every Week</h1>
-            <p class="hero-text">Join thousands of Nigerians entering our free weekly giveaway. No purchase needed.</p>
-            
-            <div class="prize-box">
-                <div class="prize-label">This Week's Prize</div>
-                <div class="prize-amount">₦100,000</div>
+            <div class="giveaway-info">
+                <div class="giveaway-icon">🎁</div>
+                <div class="giveaway-text">
+                    <h2>Weekly Cash Giveaway</h2>
+                    <p>Win <span class="giveaway-amount">₦100,000</span> every week!</p>
+                </div>
             </div>
-            
-            <div class="stats-row">
-                <div class="stat">
-                    <div class="stat-number" id="entries-count">4,892</div>
+            <div class="giveaway-stats">
+                <div>
+                    <div class="stat-value" id="entries-count">4,892</div>
                     <div class="stat-label">Entries</div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number" id="countdown-days">4</div>
+                <div>
+                    <div class="stat-value" id="countdown-days">4</div>
                     <div class="stat-label">Days Left</div>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">12</div>
-                    <div class="stat-label">Winners So Far</div>
-                </div>
             </div>
+            <a href="#giveaway" class="giveaway-cta">Enter Free Now →</a>
+        </div>
+    </div>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Your Guide to <span>Financial Freedom</span></h1>
+            <p class="blog-hero-subtitle">Practical money tips, guides, and resources for Nigerians</p>
             
-            <a href="#enter" class="cta-button">Enter Free Now →</a>
-        </div>
-    </section>
-
-    <!-- Ad Slot -->
-    <div class="ad-container">
-        <div class="container">
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-3212022468120924"
-                 data-ad-slot="9057164066"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-        </div>
-    </div>
-
-    <section class="section">
-        <div class="container">
-            <h2>How It Works</h2>
-            <p class="section-subtitle">Three simple steps to enter</p>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Enter Your Email</h3>
-                    <p>Provide your email address to register for the weekly draw.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Confirm Entry</h3>
-                    <p>Check your inbox and verify your entry.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Win Cash</h3>
-                    <p>Winners get ₦100,000 sent directly to their bank.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="entry-section" id="enter">
-        <div class="container">
-            <div class="entry-card">
-                <h2>Enter to Win ₦100,000</h2>
-                <p>Fill in your details below to enter this week's draw</p>
+            <!-- Featured Articles -->
+            <div class="featured-grid">
+                <article class="article-card">
+                    <a href="blog-loan-apps.html">
+                        <div class="article-image" style="background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);">
+                            <span class="article-category">Loans</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Best Loan Apps in Nigeria 2024: Get Instant Loans Without Collateral</h3>
+                            <p>Compare FairMoney, Carbon, Branch and more. Find the lowest rates and get approved in minutes.</p>
+                            <span class="article-meta">15 min read • Updated Dec 2024</span>
+                        </div>
+                    </a>
+                </article>
                 
-                <form id="giveaway-form">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="name">Full Name (Optional)</label>
-                        <input type="text" id="name" name="name" placeholder="Your name">
-                    </div>
-                    <div class="checkbox-row">
-                        <input type="checkbox" id="terms" name="terms" required>
-                        <label for="terms">I agree to the <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a></label>
-                    </div>
-                    <div class="checkbox-row">
-                        <input type="checkbox" id="newsletter" name="newsletter" checked>
-                        <label for="newsletter">Send me updates about future giveaways</label>
-                    </div>
-                    <button type="submit" class="submit-btn" id="submit-btn">Enter Giveaway</button>
-                </form>
-                <p class="form-note">Your information is secure and will never be shared.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section section-dark">
-        <div class="container">
-            <h2>Recent Winners</h2>
-            <p class="section-subtitle">Real people winning real cash</p>
-            <div class="winners-grid">
-                <div class="winner-card">
-                    <div class="winner-avatar">C</div>
-                    <div class="winner-info">
-                        <h4>Chioma A.</h4>
-                        <p>Lagos</p>
-                        <span class="amount">Won ₦100,000</span>
-                    </div>
-                </div>
-                <div class="winner-card">
-                    <div class="winner-avatar">E</div>
-                    <div class="winner-info">
-                        <h4>Emmanuel O.</h4>
-                        <p>Abuja</p>
-                        <span class="amount">Won ₦100,000</span>
-                    </div>
-                </div>
-                <div class="winner-card">
-                    <div class="winner-avatar">F</div>
-                    <div class="winner-info">
-                        <h4>Fatima B.</h4>
-                        <p>Kano</p>
-                        <span class="amount">Won ₦100,000</span>
-                    </div>
-                </div>
+                <article class="article-card">
+                    <a href="blog-crypto-nigeria.html">
+                        <div class="article-image" style="background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);">
+                            <span class="article-category">Crypto</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>How to Buy Bitcoin in Nigeria Safely</h3>
+                            <p>P2P trading, exchanges, and avoiding scams.</p>
+                            <span class="article-meta">18 min read</span>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="article-card">
+                    <a href="blog-forex-trading.html">
+                        <div class="article-image" style="background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);">
+                            <span class="article-category">Trading</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Forex Trading for Beginners in Nigeria</h3>
+                            <p>Learn the basics, best brokers, and risks.</p>
+                            <span class="article-meta">16 min read</span>
+                        </div>
+                    </a>
+                </article>
             </div>
         </div>
     </section>
@@ -740,90 +768,214 @@
         </div>
     </div>
 
-    <section class="section">
+    <!-- Browse Categories -->
+    <section class="content-section">
         <div class="container">
-            <h2>Frequently Asked Questions</h2>
-            <div class="faq-list">
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Is this really free?</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Yes! Entry is 100% free. No purchase or payment is ever required to enter or claim prizes.</p>
+            <div class="section-header">
+                <h2>Browse Topics</h2>
+                <a href="blog.html">View All →</a>
+            </div>
+            <div class="category-grid">
+                <a href="blog.html#loans" class="category-card">
+                    <div class="category-icon" style="background: #DBEAFE;">💰</div>
+                    <h3>Loans & Credit</h3>
+                    <p>3 articles</p>
+                </a>
+                <a href="blog.html#insurance" class="category-card">
+                    <div class="category-icon" style="background: #FEE2E2;">🛡️</div>
+                    <h3>Insurance</h3>
+                    <p>2 articles</p>
+                </a>
+                <a href="blog.html#investing" class="category-card">
+                    <div class="category-icon" style="background: #F3E8FF;">📈</div>
+                    <h3>Investing</h3>
+                    <p>3 articles</p>
+                </a>
+                <a href="blog.html#savings" class="category-card">
+                    <div class="category-icon" style="background: #ECFDF5;">🏦</div>
+                    <h3>Savings</h3>
+                    <p>4 articles</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Articles -->
+    <section class="content-section alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>Latest Articles</h2>
+                <a href="blog.html">View All →</a>
+            </div>
+            <div class="article-list">
+                <a href="blog-health-insurance.html" class="article-list-item">
+                    <div class="article-thumb" style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                     </div>
+                    <div class="article-list-content">
+                        <h3>Health Insurance in Nigeria 2024: Complete HMO Guide</h3>
+                        <p>Compare plans, costs, and find the best coverage for your family.</p>
+                        <span class="meta">14 min read • Insurance</span>
+                    </div>
+                </a>
+                
+                <a href="blog-credit-cards.html" class="article-list-item">
+                    <div class="article-thumb" style="background: linear-gradient(135deg, #059669 0%, #10B981 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    </div>
+                    <div class="article-list-content">
+                        <h3>Best Credit Cards in Nigeria: Naira & Dollar Cards Compared</h3>
+                        <p>Compare limits, fees, and benefits of Nigerian credit cards.</p>
+                        <span class="meta">12 min read • Credit</span>
+                    </div>
+                </a>
+                
+                <a href="blog-car-insurance.html" class="article-list-item">
+                    <div class="article-thumb" style="background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 17H3a2 2 0 01-2-2V9c0-2 4-2 4-4h10c0 2 4 2 4 4v6a2 2 0 01-2 2h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+                    </div>
+                    <div class="article-list-content">
+                        <h3>Car Insurance in Nigeria: Third Party vs Comprehensive</h3>
+                        <p>Everything about vehicle insurance, costs, claims, and best companies.</p>
+                        <span class="meta">13 min read • Insurance</span>
+                    </div>
+                </a>
+                
+                <a href="blog-debt-management.html" class="article-list-item">
+                    <div class="article-thumb" style="background: linear-gradient(135deg, #F97316 0%, #FB923C 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    </div>
+                    <div class="article-list-content">
+                        <h3>How to Get Out of Debt in Nigeria</h3>
+                        <p>Proven strategies to pay off loans and achieve financial freedom.</p>
+                        <span class="meta">15 min read • Debt</span>
+                    </div>
+                </a>
+                
+                <a href="blog-tax-nigeria.html" class="article-list-item">
+                    <div class="article-thumb" style="background: linear-gradient(135deg, #059669 0%, #10B981 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                    </div>
+                    <div class="article-list-content">
+                        <h3>Taxes in Nigeria 2024: Personal & Business Tax Guide</h3>
+                        <p>PAYE, VAT, company tax, filing returns, and legal tax savings.</p>
+                        <span class="meta">16 min read • Taxes</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Slot -->
+    <div class="ad-container">
+        <div class="container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3212022468120924"
+                 data-ad-slot="9057164066"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
+    <!-- Giveaway Entry Section -->
+    <section class="giveaway-section" id="giveaway">
+        <div class="container">
+            <div class="giveaway-content">
+                <div class="giveaway-details">
+                    <h2>Win <span>₦100,000</span> Cash Every Week!</h2>
+                    <p>Join thousands of Nigerians entering our free weekly giveaway. Real winners, real cash.</p>
+                    <ul class="giveaway-perks">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            100% Free to enter
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            No purchase necessary
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            Winners paid directly to bank
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+                            New draw every Sunday
+                        </li>
+                    </ul>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How are winners selected?</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Winners are selected randomly using a certified random number generator. Every entry has an equal chance.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>How do I receive my prize?</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Winners are notified by email and receive payment directly to their Nigerian bank account within 24-48 hours.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">
-                        <span>Who can enter?</span>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-                    </button>
-                    <div class="faq-answer">
-                        <p>The giveaway is open to Nigerian residents aged 18 and above with a valid bank account.</p>
-                    </div>
+                
+                <div class="entry-form-card">
+                    <h3>Enter This Week's Draw</h3>
+                    <p>Fill in your details below</p>
+                    
+                    <form id="giveaway-form">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">Full Name (Optional)</label>
+                            <input type="text" id="name" name="name" placeholder="Your name">
+                        </div>
+                        <div class="checkbox-row">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a></label>
+                        </div>
+                        <div class="checkbox-row">
+                            <input type="checkbox" id="newsletter" name="newsletter" checked>
+                            <label for="newsletter">Send me money tips and giveaway updates</label>
+                        </div>
+                        <button type="submit" class="submit-btn" id="submit-btn">Enter Giveaway Free →</button>
+                    </form>
+                    <p class="form-note">Your information is secure and will never be shared.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section" style="background: #F9FAFB;">
+    <!-- More Articles -->
+    <section class="content-section">
         <div class="container">
-            <h2>From Our Blog</h2>
-            <p class="section-subtitle">Tips and resources for Nigerians</p>
-            <div class="blog-list">
-                <a href="blog-saving-money-nigeria.html" class="blog-item">
-                    <div class="blog-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-                        </svg>
+            <div class="section-header">
+                <h2>Popular Money Guides</h2>
+                <a href="blog.html">View All →</a>
+            </div>
+            <div class="article-list">
+                <a href="blog-saving-money-nigeria.html" class="article-list-item">
+                    <div class="article-thumb" style="background: linear-gradient(135deg, #059669 0%, #10B981 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
                     </div>
-                    <div>
-                        <h3>10 Ways to Save Money in Nigeria</h3>
-                        <p>Practical tips that actually work for Nigerian households.</p>
-                    </div>
-                </a>
-                <a href="blog-online-scams.html" class="blog-item">
-                    <div class="blog-icon" style="background: #DC2626;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3>How to Spot Fake Giveaways</h3>
-                        <p>Protect yourself from online scams with these warning signs.</p>
+                    <div class="article-list-content">
+                        <h3>10 Practical Ways to Save Money in Nigeria</h3>
+                        <p>Proven strategies that work for Nigerian households dealing with rising costs.</p>
+                        <span class="meta">8 min read • Savings</span>
                     </div>
                 </a>
-                <a href="blog-side-hustles.html" class="blog-item">
-                    <div class="blog-icon" style="background: var(--orange);">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-                        </svg>
+                
+                <a href="blog-side-hustles.html" class="article-list-item">
+                    <div class="article-thumb" style="background: linear-gradient(135deg, #F97316 0%, #FB923C 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
                     </div>
-                    <div>
-                        <h3>15 Side Hustles You Can Start Today</h3>
-                        <p>Legitimate ways Nigerians are earning extra income.</p>
+                    <div class="article-list-content">
+                        <h3>15 Legitimate Side Hustles in Nigeria</h3>
+                        <p>Real opportunities Nigerians are using to earn extra income.</p>
+                        <span class="meta">10 min read • Income</span>
+                    </div>
+                </a>
+                
+                <a href="blog-investment-beginners.html" class="article-list-item">
+                    <div class="article-thumb" style="background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    </div>
+                    <div class="article-list-content">
+                        <h3>Investment Options for Beginners in Nigeria</h3>
+                        <p>Stocks, mutual funds, treasury bills, and more explained simply.</p>
+                        <span class="meta">12 min read • Investing</span>
                     </div>
                 </a>
             </div>
-            <a href="blog.html" class="view-all">View All Articles →</a>
         </div>
     </section>
 
@@ -832,36 +984,40 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="logo" style="color: white;">NaijaWins</div>
-                    <p>Nigeria's free weekly cash giveaway platform.</p>
+                    <p>Nigeria's finance blog + free weekly cash giveaway.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Topics</h4>
+                    <a href="blog.html">All Articles</a>
+                    <a href="blog-loan-apps.html">Loans</a>
+                    <a href="blog-investment-beginners.html">Investing</a>
+                    <a href="blog-saving-money-nigeria.html">Savings</a>
                 </div>
                 <div class="footer-links">
                     <h4>Pages</h4>
                     <a href="about.html">About</a>
-                    <a href="blog.html">Blog</a>
                     <a href="contact.html">Contact</a>
+                    <a href="#giveaway">Giveaway</a>
                 </div>
                 <div class="footer-links">
                     <h4>Legal</h4>
                     <a href="privacy.html">Privacy Policy</a>
-                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="terms.html">Terms</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2024 NaijaWins. All rights reserved.</p>
-                <p class="footer-disclaimer">This promotion is not sponsored by or associated with any social media platform. No purchase necessary. Must be 18+ and a Nigerian resident.</p>
+                <p style="margin-top: 8px;">This promotion is not sponsored by or associated with any social media platform. No purchase necessary. Must be 18+ and a Nigerian resident.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Floating CTA Button -->
+    <a href="#giveaway" class="floating-cta">
+        🎁 Win ₦100K Free
+    </a>
+
     <script>
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                item.classList.toggle('open');
-            });
-        });
-        
         // Dynamic entry count
         const entriesEl = document.getElementById('entries-count');
         let count = 4892;
@@ -897,11 +1053,24 @@
                 });
                 window.location.href = 'success.html';
             } catch (err) {
-                btn.textContent = 'Enter Giveaway';
+                btn.textContent = 'Enter Giveaway Free →';
                 btn.disabled = false;
                 alert('Something went wrong. Please try again.');
             }
         });
+        
+        // Hide floating CTA when giveaway section is visible
+        const floatingCta = document.querySelector('.floating-cta');
+        const giveawaySection = document.getElementById('giveaway');
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                floatingCta.style.opacity = entry.isIntersecting ? '0' : '1';
+                floatingCta.style.pointerEvents = entry.isIntersecting ? 'none' : 'auto';
+            });
+        }, { threshold: 0.3 });
+        
+        observer.observe(giveawaySection);
     </script>
 </body>
 </html>
