@@ -16,3 +16,7 @@ npm-debug.log*
 *.bak
 *.tmp
 
+# Private strategy documents
+AD_ARBITRAGE_STRATEGY.md
+*_STRATEGY.md
+*_PRIVATE.md
