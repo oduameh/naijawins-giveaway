@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NaijaWins Blog - Financial tips, money saving advice, and resources for Nigerians. Learn about budgeting, investing, and building wealth.">
-    <title>Blog - Financial Tips for Nigerians | NaijaWins</title>
+    <meta name="description" content="NaijaWins Blog - Financial tips, money saving advice, loans, insurance, investing, and resources for Nigerians. Learn about budgeting, credit, and building wealth.">
+    <meta name="keywords" content="Nigeria finance, money tips Nigeria, loans Nigeria, insurance Nigeria, investing Nigeria, budgeting, savings, credit cards Nigeria">
+    <title>Blog - Financial Tips & Guides for Nigerians | NaijaWins</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,18 +34,19 @@
         
         .blog-grid { display: grid; gap: 24px; margin-bottom: 48px; }
         @media (min-width: 640px) { .blog-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 900px) { .blog-grid-3 { grid-template-columns: repeat(3, 1fr); } }
         
         .blog-card { background: #fff; border: 1px solid var(--light); border-radius: 12px; overflow: hidden; transition: all 0.2s; }
         .blog-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); transform: translateY(-2px); }
         .blog-card a { text-decoration: none; color: inherit; display: block; }
         
-        .blog-image { height: 140px; display: flex; align-items: flex-start; padding: 16px; }
-        .blog-category { background: rgba(255,255,255,0.95); font-size: 0.75rem; font-weight: 600; padding: 4px 10px; border-radius: 50px; }
+        .blog-image { height: 100px; display: flex; align-items: flex-start; padding: 12px; }
+        .blog-category { background: rgba(255,255,255,0.95); font-size: 0.7rem; font-weight: 600; padding: 3px 8px; border-radius: 50px; }
         
-        .blog-content { padding: 20px; }
-        .blog-content h3 { font-size: 1rem; font-weight: 600; line-height: 1.4; margin-bottom: 8px; }
-        .blog-content p { font-size: 0.875rem; color: var(--gray); margin-bottom: 12px; }
-        .blog-meta { font-size: 0.75rem; color: #9CA3AF; }
+        .blog-content { padding: 16px; }
+        .blog-content h3 { font-size: 0.9rem; font-weight: 600; line-height: 1.4; margin-bottom: 6px; }
+        .blog-content p { font-size: 0.8rem; color: var(--gray); margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .blog-meta { font-size: 0.7rem; color: #9CA3AF; }
         
         .ad-container { padding: 24px 0; background: var(--light); margin: 32px 0; }
         
@@ -85,16 +87,175 @@
     <main class="blog-section">
         <div class="container">
             
-            <h2 class="section-title">Money & Savings</h2>
+            <!-- LOANS & CREDIT - HIGH RPM -->
+            <h2 class="section-title">Loans & Credit</h2>
+            <div class="blog-grid blog-grid-3">
+                <article class="blog-card">
+                    <a href="blog-loan-apps.html">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);">
+                            <span class="blog-category">Loans</span>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Best Loan Apps in Nigeria 2024: Instant Loans Without Collateral</h3>
+                            <p>Compare FairMoney, Carbon, Branch, and more. Find the best rates.</p>
+                            <span class="blog-meta">15 min read</span>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="blog-credit-cards.html">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #059669 0%, #10B981 100%);">
+                            <span class="blog-category">Credit</span>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Best Credit Cards in Nigeria 2024: Naira & Dollar Cards</h3>
+                            <p>Compare limits, fees, and benefits of Nigerian credit cards.</p>
+                            <span class="blog-meta">12 min read</span>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="blog-debt-management.html">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);">
+                            <span class="blog-category">Debt</span>
+                        </div>
+                        <div class="blog-content">
+                            <h3>How to Get Out of Debt in Nigeria</h3>
+                            <p>Proven strategies to pay off loans and achieve financial freedom.</p>
+                            <span class="blog-meta">15 min read</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- INSURANCE - HIGH RPM -->
+            <h2 class="section-title">Insurance</h2>
             <div class="blog-grid">
+                <article class="blog-card">
+                    <a href="blog-health-insurance.html">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);">
+                            <span class="blog-category">Health</span>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Health Insurance in Nigeria 2024: HMO Plans & Coverage Guide</h3>
+                            <p>Compare HMO plans, costs, and find the best coverage for your family.</p>
+                            <span class="blog-meta">14 min read</span>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="blog-car-insurance.html">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);">
+                            <span class="blog-category">Auto</span>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Car Insurance in Nigeria: Third Party vs Comprehensive</h3>
+                            <p>Everything about vehicle insurance, costs, claims, and best companies.</p>
+                            <span class="blog-meta">13 min read</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Ad -->
+            <div class="ad-container">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3212022468120924" data-ad-slot="9057164066" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <!-- INVESTING & TRADING - HIGH RPM -->
+            <h2 class="section-title">Investing & Trading</h2>
+            <div class="blog-grid blog-grid-3">
+                <article class="blog-card">
+                    <a href="blog-forex-trading.html">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);">
+                            <span class="blog-category">Trading</span>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Forex Trading in Nigeria: Complete Beginner's Guide</h3>
+                            <p>Learn forex basics, best brokers, risks, and how to avoid scams.</p>
+                            <span class="blog-meta">16 min read</span>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="blog-crypto-nigeria.html">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);">
+                            <span class="blog-category">Crypto</span>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Cryptocurrency in Nigeria 2024: How to Buy Bitcoin Safely</h3>
+                            <p>P2P trading, exchanges, wallets, and avoiding crypto scams.</p>
+                            <span class="blog-meta">18 min read</span>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="blog-investment-beginners.html">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);">
+                            <span class="blog-category">Investing</span>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Investment Options for Beginners in Nigeria</h3>
+                            <p>Stocks, mutual funds, treasury bills, and more explained.</p>
+                            <span class="blog-meta">12 min read</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- TAXES & RETIREMENT - HIGH RPM -->
+            <h2 class="section-title">Taxes & Retirement</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <a href="blog-tax-nigeria.html">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #059669 0%, #10B981 100%);">
+                            <span class="blog-category">Taxes</span>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Taxes in Nigeria 2024: Complete Personal & Business Guide</h3>
+                            <p>PAYE, VAT, company tax, filing returns, and legal tax savings.</p>
+                            <span class="blog-meta">16 min read</span>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="blog-card">
+                    <a href="blog-pension-retirement.html">
+                        <div class="blog-image" style="background: linear-gradient(135deg, #7C3AED 0%, #8B5CF6 100%);">
+                            <span class="blog-category">Retirement</span>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Pension & Retirement Planning in Nigeria</h3>
+                            <p>RSA, PFA, voluntary contributions, and retirement strategies.</p>
+                            <span class="blog-meta">14 min read</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <!-- Ad -->
+            <div class="ad-container">
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3212022468120924" data-ad-slot="9057164066" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <!-- MONEY & SAVINGS -->
+            <h2 class="section-title">Money & Savings</h2>
+            <div class="blog-grid blog-grid-3">
                 <article class="blog-card">
                     <a href="blog-saving-money-nigeria.html">
                         <div class="blog-image" style="background: linear-gradient(135deg, #059669 0%, #10B981 100%);">
                             <span class="blog-category">Savings</span>
                         </div>
                         <div class="blog-content">
-                            <h3>10 Practical Ways to Save Money in Nigeria in 2024</h3>
-                            <p>Proven strategies that work for Nigerian households dealing with rising costs.</p>
+                            <h3>10 Practical Ways to Save Money in Nigeria</h3>
+                            <p>Proven strategies for Nigerian households dealing with rising costs.</p>
                             <span class="blog-meta">8 min read</span>
                         </div>
                     </a>
@@ -120,7 +281,7 @@
                         </div>
                         <div class="blog-content">
                             <h3>How to Build an Emergency Fund in Nigeria</h3>
-                            <p>Step-by-step guide to saving 3-6 months of expenses for financial security.</p>
+                            <p>Save 3-6 months of expenses for financial security.</p>
                             <span class="blog-meta">9 min read</span>
                         </div>
                     </a>
@@ -133,20 +294,15 @@
                         </div>
                         <div class="blog-content">
                             <h3>Smart Shopping Tips to Save Money</h3>
-                            <p>How to get the best deals and avoid impulse purchases.</p>
+                            <p>Get the best deals and avoid impulse purchases.</p>
                             <span class="blog-meta">7 min read</span>
                         </div>
                     </a>
                 </article>
             </div>
 
-            <!-- Ad -->
-            <div class="ad-container">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3212022468120924" data-ad-slot="9057164066" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-
-            <h2 class="section-title">Banking & Investing</h2>
+            <!-- BANKING -->
+            <h2 class="section-title">Banking</h2>
             <div class="blog-grid">
                 <article class="blog-card">
                     <a href="blog-bank-account.html">
@@ -155,7 +311,7 @@
                         </div>
                         <div class="blog-content">
                             <h3>How to Open a Bank Account in Nigeria</h3>
-                            <p>Complete guide with requirements, documents, and step-by-step process.</p>
+                            <p>Requirements, documents, and step-by-step process.</p>
                             <span class="blog-meta">8 min read</span>
                         </div>
                     </a>
@@ -173,21 +329,9 @@
                         </div>
                     </a>
                 </article>
-                
-                <article class="blog-card">
-                    <a href="blog-investment-beginners.html">
-                        <div class="blog-image" style="background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);">
-                            <span class="blog-category">Investing</span>
-                        </div>
-                        <div class="blog-content">
-                            <h3>Investment Options for Beginners in Nigeria</h3>
-                            <p>Learn about stocks, mutual funds, treasury bills, and more.</p>
-                            <span class="blog-meta">12 min read</span>
-                        </div>
-                    </a>
-                </article>
             </div>
 
+            <!-- EARNING & BUSINESS -->
             <h2 class="section-title">Earning & Business</h2>
             <div class="blog-grid">
                 <article class="blog-card">
@@ -197,7 +341,7 @@
                         </div>
                         <div class="blog-content">
                             <h3>15 Legitimate Side Hustles in Nigeria</h3>
-                            <p>Real opportunities that Nigerians are using to earn extra income.</p>
+                            <p>Real opportunities Nigerians are using to earn extra income.</p>
                             <span class="blog-meta">10 min read</span>
                         </div>
                     </a>
@@ -217,12 +361,7 @@
                 </article>
             </div>
 
-            <!-- Ad -->
-            <div class="ad-container">
-                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3212022468120924" data-ad-slot="9057164066" data-ad-format="auto" data-full-width-responsive="true"></ins>
-                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-            </div>
-
+            <!-- SAFETY -->
             <h2 class="section-title">Safety & Scam Awareness</h2>
             <div class="blog-grid">
                 <article class="blog-card">
