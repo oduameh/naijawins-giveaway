@@ -1,12 +1,18 @@
-# NaijaWins Robots.txt
-# https://naijawins.digital
+# robots.txt for naijawins.digital
 
 User-agent: *
 Allow: /
 
+# Important files for crawlers
+Allow: /ads.txt
+Allow: /app-ads.txt
+Allow: /sitemap.xml
+
+# Block admin/private areas
+Disallow: /admin/
+
 # Sitemap location
 Sitemap: https://naijawins.digital/sitemap.xml
 
-# Crawl-delay for polite crawling
-Crawl-delay: 1
-
+# Ads.txt location (helps ad crawlers find it)
+# https://naijawins.digital/ads.txt
