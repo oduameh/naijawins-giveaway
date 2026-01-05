@@ -189,7 +189,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
   
   <!-- INVESTING (11 articles) -->
   <url>
@@ -361,14 +360,11 @@
     <priority>0.8</priority>
   </url>
   <url>
-  <url>
     <loc>https://naijawins.digital/blog-retirement-planning-nigeria.html</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-  <url>
   
   <!-- BUSINESS & INCOME (9 articles) -->
   <url>
@@ -389,7 +385,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
   <url>
     <loc>https://naijawins.digital/blog-pos-business-nigeria.html</loc>
     <lastmod>2026-01-05</lastmod>
@@ -414,7 +409,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
   
   <!-- FINANCIAL LITERACY & ECONOMY (6 articles) -->
   <url>
@@ -435,7 +429,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
   <url>
     <loc>https://naijawins.digital/blog-online-scams.html</loc>
     <lastmod>2026-01-05</lastmod>
