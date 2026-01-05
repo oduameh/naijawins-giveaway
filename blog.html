@@ -96,6 +96,15 @@
             margin: 0 auto;
         }
         
+        .article-count {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 16px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 0.875rem;
+        }
+        
         /* Filter Tabs */
         .filter-tabs {
             display: flex;
@@ -158,7 +167,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 24px;
-            margin-bottom: 48px;
+            margin-bottom: 24px;
         }
         
         @media (max-width: 900px) {
@@ -167,6 +176,7 @@
         
         @media (max-width: 600px) {
             .article-grid { grid-template-columns: 1fr; }
+            .nav-links { gap: 12px; font-size: 0.75rem; }
         }
         
         .article-card {
@@ -186,7 +196,7 @@
         }
         
         .article-card-image {
-            height: 120px;
+            height: 100px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -206,24 +216,28 @@
             border-radius: 4px;
         }
         
-        .article-card-body { padding: 20px; }
+        .article-card-body { padding: 16px; }
         
         .article-card-title {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             color: var(--primary);
             line-height: 1.4;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
         
         .article-card-excerpt {
-            font-size: 0.875rem;
+            font-size: 0.8rem;
             color: var(--text-light);
-            margin-bottom: 12px;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
         
         .article-card-meta {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: var(--text-light);
         }
         
@@ -236,6 +250,8 @@
         .cat-crypto { background: linear-gradient(135deg, #EA580C 0%, #F97316 100%); }
         .cat-budgeting { background: linear-gradient(135deg, #0891B2 0%, #06B6D4 100%); }
         .cat-business { background: linear-gradient(135deg, #BE185D 0%, #EC4899 100%); }
+        .cat-retirement { background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%); }
+        .cat-security { background: linear-gradient(135deg, #991B1B 0%, #B91C1C 100%); }
         
         /* Footer */
         .footer {
@@ -271,6 +287,7 @@
         <div class="container">
             <h1>Finance Guides</h1>
             <p>Expert guides on taxes, loans, banking, investing, and money management for Nigerians.</p>
+            <div class="article-count">📚 71 Comprehensive Guides</div>
         </div>
     </section>
 
@@ -284,6 +301,8 @@
             <a href="#investing" class="filter-tab">Investing</a>
             <a href="#insurance" class="filter-tab">Insurance</a>
             <a href="#budgeting" class="filter-tab">Budgeting</a>
+            <a href="#business" class="filter-tab">Business</a>
+            <a href="#retirement" class="filter-tab">Retirement</a>
         </div>
     </div>
 
@@ -309,12 +328,61 @@
                 <a href="blog-tax-nigeria.html" class="article-card">
                     <div class="article-card-image cat-taxes">
                         <span class="article-card-category">Taxes</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
                     </div>
                     <div class="article-card-body">
                         <h3 class="article-card-title">Nigeria Tax Guide 2025: PAYE, VAT & New Reforms</h3>
                         <p class="article-card-excerpt">Complete breakdown of Nigeria's tax system and the new reform bills.</p>
-                        <span class="article-card-meta">16 min read • Updated Dec 2025</span>
+                        <span class="article-card-meta">16 min read</span>
+                    </div>
+                </a>
+                <a href="blog-firs-tax-registration.html" class="article-card">
+                    <div class="article-card-image cat-taxes">
+                        <span class="article-card-category">Taxes</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">FIRS Tax Registration Guide</h3>
+                        <p class="article-card-excerpt">How to register for TIN and file taxes with FIRS.</p>
+                        <span class="article-card-meta">12 min read</span>
+                    </div>
+                </a>
+                <a href="blog-paye-tax-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-taxes">
+                        <span class="article-card-category">PAYE</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">PAYE Tax Calculation Guide</h3>
+                        <p class="article-card-excerpt">Understand how your salary is taxed in Nigeria.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+                <a href="blog-vat-tax-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-taxes">
+                        <span class="article-card-category">VAT</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">VAT in Nigeria: Complete Guide</h3>
+                        <p class="article-card-excerpt">Value Added Tax rates, exemptions, and compliance.</p>
+                        <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-bvn-nin-registration.html" class="article-card">
+                    <div class="article-card-image cat-taxes">
+                        <span class="article-card-category">ID</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">BVN & NIN Registration Guide</h3>
+                        <p class="article-card-excerpt">How to get your Bank Verification Number and NIN.</p>
+                        <span class="article-card-meta">10 min read</span>
+                    </div>
+                </a>
+                <a href="blog-cac-registration.html" class="article-card">
+                    <div class="article-card-image cat-taxes">
+                        <span class="article-card-category">Business</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">CAC Business Registration Guide</h3>
+                        <p class="article-card-excerpt">Register your business with Corporate Affairs Commission.</p>
+                        <span class="article-card-meta">15 min read</span>
                     </div>
                 </a>
             </div>
@@ -329,19 +397,46 @@
                 <a href="blog-loan-apps.html" class="article-card">
                     <div class="article-card-image cat-loans">
                         <span class="article-card-category">Loans</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
                     </div>
                     <div class="article-card-body">
                         <h3 class="article-card-title">Best Loan Apps in Nigeria 2025</h3>
                         <p class="article-card-excerpt">Compare FairMoney, Carbon, Branch and more loan apps.</p>
-                        <span class="article-card-meta">15 min read • Updated Dec 2025</span>
+                        <span class="article-card-meta">15 min read</span>
                     </div>
                 </a>
-                
-                <a href="blog-credit-cards.html" class="article-card">
-                    <div class="article-card-image cat-banking">
+                <a href="blog-personal-loans-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-loans">
+                        <span class="article-card-category">Personal</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Personal Loans in Nigeria</h3>
+                        <p class="article-card-excerpt">Best rates and requirements for personal loans.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+                <a href="blog-business-loans-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-loans">
+                        <span class="article-card-category">Business</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Business Loans in Nigeria</h3>
+                        <p class="article-card-excerpt">SME loans, CBN intervention funds, and more.</p>
+                        <span class="article-card-meta">16 min read</span>
+                    </div>
+                </a>
+                <a href="blog-credit-score-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-loans">
                         <span class="article-card-category">Credit</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Understanding Your Credit Score</h3>
+                        <p class="article-card-excerpt">How credit bureaus work in Nigeria.</p>
+                        <span class="article-card-meta">12 min read</span>
+                    </div>
+                </a>
+                <a href="blog-credit-cards.html" class="article-card">
+                    <div class="article-card-image cat-loans">
+                        <span class="article-card-category">Credit</span>
                     </div>
                     <div class="article-card-body">
                         <h3 class="article-card-title">Best Credit Cards in Nigeria</h3>
@@ -349,16 +444,64 @@
                         <span class="article-card-meta">12 min read</span>
                     </div>
                 </a>
-                
-                <a href="blog-debt-management.html" class="article-card">
-                    <div class="article-card-image cat-budgeting">
-                        <span class="article-card-category">Debt</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                <a href="blog-student-loans-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-loans">
+                        <span class="article-card-category">Student</span>
                     </div>
                     <div class="article-card-body">
-                        <h3 class="article-card-title">How to Get Out of Debt in Nigeria</h3>
-                        <p class="article-card-excerpt">Strategies to pay off loans and achieve freedom.</p>
+                        <h3 class="article-card-title">Student Loans in Nigeria</h3>
+                        <p class="article-card-excerpt">Education financing options for Nigerian students.</p>
+                        <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-car-loans-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-loans">
+                        <span class="article-card-category">Auto</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Car Loans in Nigeria</h3>
+                        <p class="article-card-excerpt">How to finance your vehicle purchase.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+                <a href="blog-mortgage-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-loans">
+                        <span class="article-card-category">Mortgage</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Mortgage Guide Nigeria</h3>
+                        <p class="article-card-excerpt">Home loans and mortgage options explained.</p>
+                        <span class="article-card-meta">16 min read</span>
+                    </div>
+                </a>
+                <a href="blog-microfinance-banks-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-loans">
+                        <span class="article-card-category">Microfinance</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Microfinance Banks in Nigeria</h3>
+                        <p class="article-card-excerpt">Best MFBs for loans and savings.</p>
+                        <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-debt-management-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-loans">
+                        <span class="article-card-category">Debt</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Debt Management Strategies</h3>
+                        <p class="article-card-excerpt">How to get out of debt in Nigeria.</p>
                         <span class="article-card-meta">15 min read</span>
+                    </div>
+                </a>
+                <a href="blog-debt-management.html" class="article-card">
+                    <div class="article-card-image cat-loans">
+                        <span class="article-card-category">Debt</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Complete Debt Freedom Guide</h3>
+                        <p class="article-card-excerpt">Step-by-step to becoming debt-free.</p>
+                        <span class="article-card-meta">14 min read</span>
                     </div>
                 </a>
             </div>
@@ -368,29 +511,86 @@
     <!-- Banking Section -->
     <section class="section" id="banking">
         <div class="container">
-            <h2 class="section-title">🏦 Banking</h2>
+            <h2 class="section-title">🏦 Banking & Money</h2>
             <div class="article-grid">
                 <a href="blog-bank-account.html" class="article-card">
                     <div class="article-card-image cat-banking">
                         <span class="article-card-category">Banking</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"/></svg>
                     </div>
                     <div class="article-card-body">
-                        <h3 class="article-card-title">How to Open a Bank Account in Nigeria</h3>
-                        <p class="article-card-excerpt">Requirements, documents, and step-by-step guide.</p>
+                        <h3 class="article-card-title">How to Open a Bank Account</h3>
+                        <p class="article-card-excerpt">Requirements and step-by-step guide.</p>
                         <span class="article-card-meta">10 min read</span>
                     </div>
                 </a>
-                
                 <a href="blog-mobile-banking.html" class="article-card">
                     <div class="article-card-image cat-banking">
                         <span class="article-card-category">Mobile</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
                     </div>
                     <div class="article-card-body">
-                        <h3 class="article-card-title">Best Mobile Banking Apps in Nigeria</h3>
-                        <p class="article-card-excerpt">Compare features of GTBank, Access, FirstBank apps.</p>
+                        <h3 class="article-card-title">Best Mobile Banking Apps</h3>
+                        <p class="article-card-excerpt">Compare GTBank, Access, FirstBank apps.</p>
                         <span class="article-card-meta">12 min read</span>
+                    </div>
+                </a>
+                <a href="blog-mobile-money-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-banking">
+                        <span class="article-card-category">Mobile Money</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Mobile Money Guide</h3>
+                        <p class="article-card-excerpt">OPay, PalmPay, and mobile money services.</p>
+                        <span class="article-card-meta">11 min read</span>
+                    </div>
+                </a>
+                <a href="blog-online-banking-security.html" class="article-card">
+                    <div class="article-card-image cat-banking">
+                        <span class="article-card-category">Security</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Online Banking Security Tips</h3>
+                        <p class="article-card-excerpt">Protect your accounts from fraud.</p>
+                        <span class="article-card-meta">10 min read</span>
+                    </div>
+                </a>
+                <a href="blog-virtual-dollar-cards.html" class="article-card">
+                    <div class="article-card-image cat-banking">
+                        <span class="article-card-category">Dollar</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Virtual Dollar Cards Guide</h3>
+                        <p class="article-card-excerpt">Best dollar cards for online payments.</p>
+                        <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-dollar-savings-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-banking">
+                        <span class="article-card-category">Dollar</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Dollar Savings in Nigeria</h3>
+                        <p class="article-card-excerpt">How to save and invest in USD.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+                <a href="blog-international-money-transfer.html" class="article-card">
+                    <div class="article-card-image cat-banking">
+                        <span class="article-card-category">Transfer</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">International Money Transfer</h3>
+                        <p class="article-card-excerpt">Best ways to send money abroad.</p>
+                        <span class="article-card-meta">12 min read</span>
+                    </div>
+                </a>
+                <a href="blog-fintech-apps-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-banking">
+                        <span class="article-card-category">Fintech</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Best Fintech Apps in Nigeria</h3>
+                        <p class="article-card-excerpt">Top apps for payments and savings.</p>
+                        <span class="article-card-meta">13 min read</span>
                     </div>
                 </a>
             </div>
@@ -418,37 +618,112 @@
             <div class="article-grid">
                 <a href="blog-investment-beginners.html" class="article-card">
                     <div class="article-card-image cat-investing">
-                        <span class="article-card-category">Investing</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                        <span class="article-card-category">Beginners</span>
                     </div>
                     <div class="article-card-body">
-                        <h3 class="article-card-title">Investment Options for Beginners</h3>
-                        <p class="article-card-excerpt">Treasury bills, stocks, and mutual funds explained.</p>
+                        <h3 class="article-card-title">Investment for Beginners</h3>
+                        <p class="article-card-excerpt">Start your investment journey in Nigeria.</p>
                         <span class="article-card-meta">14 min read</span>
                     </div>
                 </a>
-                
+                <a href="blog-stock-investing-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-investing">
+                        <span class="article-card-category">Stocks</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Stock Investing in Nigeria</h3>
+                        <p class="article-card-excerpt">How to buy stocks on the NSE.</p>
+                        <span class="article-card-meta">16 min read</span>
+                    </div>
+                </a>
+                <a href="blog-treasury-bills-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-investing">
+                        <span class="article-card-category">T-Bills</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Treasury Bills Guide</h3>
+                        <p class="article-card-excerpt">Invest in government securities.</p>
+                        <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-mutual-funds-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-investing">
+                        <span class="article-card-category">Funds</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Mutual Funds in Nigeria</h3>
+                        <p class="article-card-excerpt">Best mutual funds and how to invest.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+                <a href="blog-bonds-investment-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-investing">
+                        <span class="article-card-category">Bonds</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Bonds Investment Guide</h3>
+                        <p class="article-card-excerpt">FGN bonds and corporate bonds.</p>
+                        <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-real-estate-investing.html" class="article-card">
+                    <div class="article-card-image cat-investing">
+                        <span class="article-card-category">Real Estate</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Real Estate Investing</h3>
+                        <p class="article-card-excerpt">Property investment in Nigeria.</p>
+                        <span class="article-card-meta">15 min read</span>
+                    </div>
+                </a>
+                <a href="blog-gold-investment-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-investing">
+                        <span class="article-card-category">Gold</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Gold Investment Guide</h3>
+                        <p class="article-card-excerpt">How to invest in gold in Nigeria.</p>
+                        <span class="article-card-meta">12 min read</span>
+                    </div>
+                </a>
+                <a href="blog-agricultural-investment-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-investing">
+                        <span class="article-card-category">Agric</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Agricultural Investment</h3>
+                        <p class="article-card-excerpt">Farm investments and agritech.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
                 <a href="blog-crypto-nigeria.html" class="article-card">
                     <div class="article-card-image cat-crypto">
                         <span class="article-card-category">Crypto</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9 12h6M12 9v6"/></svg>
                     </div>
                     <div class="article-card-body">
-                        <h3 class="article-card-title">Cryptocurrency in Nigeria 2025</h3>
-                        <p class="article-card-excerpt">How to buy Bitcoin safely via P2P trading.</p>
+                        <h3 class="article-card-title">Cryptocurrency in Nigeria</h3>
+                        <p class="article-card-excerpt">Buy Bitcoin safely via P2P trading.</p>
                         <span class="article-card-meta">18 min read</span>
                     </div>
                 </a>
-                
                 <a href="blog-forex-trading.html" class="article-card">
-                    <div class="article-card-image cat-investing">
-                        <span class="article-card-category">Trading</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    <div class="article-card-image cat-crypto">
+                        <span class="article-card-category">Forex</span>
                     </div>
                     <div class="article-card-body">
                         <h3 class="article-card-title">Forex Trading for Beginners</h3>
-                        <p class="article-card-excerpt">Best brokers, strategies, and risk management.</p>
+                        <p class="article-card-excerpt">Brokers, strategies, and risk management.</p>
                         <span class="article-card-meta">16 min read</span>
+                    </div>
+                </a>
+                <a href="blog-compound-interest.html" class="article-card">
+                    <div class="article-card-image cat-investing">
+                        <span class="article-card-category">Basics</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Power of Compound Interest</h3>
+                        <p class="article-card-excerpt">How compound interest grows wealth.</p>
+                        <span class="article-card-meta">11 min read</span>
                     </div>
                 </a>
             </div>
@@ -463,7 +738,6 @@
                 <a href="blog-health-insurance.html" class="article-card">
                     <div class="article-card-image cat-insurance">
                         <span class="article-card-category">Health</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                     </div>
                     <div class="article-card-body">
                         <h3 class="article-card-title">Health Insurance & HMO Guide</h3>
@@ -471,16 +745,44 @@
                         <span class="article-card-meta">14 min read</span>
                     </div>
                 </a>
-                
                 <a href="blog-car-insurance.html" class="article-card">
                     <div class="article-card-image cat-insurance">
                         <span class="article-card-category">Auto</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 17H3a2 2 0 01-2-2V9c0-2 4-2 4-4h10c0 2 4 2 4 4v6a2 2 0 01-2 2h-2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
                     </div>
                     <div class="article-card-body">
                         <h3 class="article-card-title">Car Insurance in Nigeria</h3>
                         <p class="article-card-excerpt">Third party vs comprehensive explained.</p>
                         <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-life-insurance-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-insurance">
+                        <span class="article-card-category">Life</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Life Insurance in Nigeria</h3>
+                        <p class="article-card-excerpt">Protect your family's future.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+                <a href="blog-business-insurance-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-insurance">
+                        <span class="article-card-category">Business</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Business Insurance Guide</h3>
+                        <p class="article-card-excerpt">Protect your business from risks.</p>
+                        <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-travel-insurance.html" class="article-card">
+                    <div class="article-card-image cat-insurance">
+                        <span class="article-card-category">Travel</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Travel Insurance Guide</h3>
+                        <p class="article-card-excerpt">Coverage for international travel.</p>
+                        <span class="article-card-meta">12 min read</span>
                     </div>
                 </a>
             </div>
@@ -495,43 +797,174 @@
                 <a href="blog-saving-money-nigeria.html" class="article-card">
                     <div class="article-card-image cat-budgeting">
                         <span class="article-card-category">Saving</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z"/></svg>
                     </div>
                     <div class="article-card-body">
-                        <h3 class="article-card-title">10 Ways to Save Money in Nigeria</h3>
+                        <h3 class="article-card-title">10 Ways to Save Money</h3>
                         <p class="article-card-excerpt">Practical tips for Nigerian households.</p>
                         <span class="article-card-meta">10 min read</span>
                     </div>
                 </a>
-                
-                <a href="blog-emergency-fund.html" class="article-card">
+                <a href="blog-savings-account-nigeria.html" class="article-card">
                     <div class="article-card-image cat-budgeting">
-                        <span class="article-card-category">Emergency</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                        <span class="article-card-category">Savings</span>
                     </div>
                     <div class="article-card-body">
-                        <h3 class="article-card-title">Building an Emergency Fund</h3>
-                        <p class="article-card-excerpt">How much to save and where to keep it.</p>
+                        <h3 class="article-card-title">Best Savings Accounts</h3>
+                        <p class="article-card-excerpt">High-interest savings accounts compared.</p>
                         <span class="article-card-meta">11 min read</span>
                     </div>
                 </a>
-                
-                <a href="blog-budgeting-tips.html" class="article-card">
+                <a href="blog-fixed-deposit-nigeria.html" class="article-card">
                     <div class="article-card-image cat-budgeting">
-                        <span class="article-card-category">Budget</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg>
+                        <span class="article-card-category">Fixed</span>
                     </div>
                     <div class="article-card-body">
-                        <h3 class="article-card-title">Family Budgeting Guide</h3>
-                        <p class="article-card-excerpt">Create a budget that works for your family.</p>
+                        <h3 class="article-card-title">Fixed Deposit Guide</h3>
+                        <p class="article-card-excerpt">Best fixed deposit rates in Nigeria.</p>
                         <span class="article-card-meta">12 min read</span>
                     </div>
                 </a>
-                
+                <a href="blog-cooperative-savings-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-budgeting">
+                        <span class="article-card-category">Coop</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Cooperative Savings Guide</h3>
+                        <p class="article-card-excerpt">How to join and benefit from coops.</p>
+                        <span class="article-card-meta">11 min read</span>
+                    </div>
+                </a>
+                <a href="blog-budgeting-tips.html" class="article-card">
+                    <div class="article-card-image cat-budgeting">
+                        <span class="article-card-category">Budget</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Family Budgeting Guide</h3>
+                        <p class="article-card-excerpt">Create a budget that works.</p>
+                        <span class="article-card-meta">12 min read</span>
+                    </div>
+                </a>
+                <a href="blog-budgeting-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-budgeting">
+                        <span class="article-card-category">Budget</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Budgeting for Nigerians</h3>
+                        <p class="article-card-excerpt">Monthly budgeting strategies.</p>
+                        <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-emergency-fund.html" class="article-card">
+                    <div class="article-card-image cat-budgeting">
+                        <span class="article-card-category">Emergency</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Building an Emergency Fund</h3>
+                        <p class="article-card-excerpt">How much to save and where.</p>
+                        <span class="article-card-meta">11 min read</span>
+                    </div>
+                </a>
+                <a href="blog-emergency-fund-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-budgeting">
+                        <span class="article-card-category">Emergency</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Emergency Fund Guide</h3>
+                        <p class="article-card-excerpt">Complete emergency savings strategy.</p>
+                        <span class="article-card-meta">12 min read</span>
+                    </div>
+                </a>
+                <a href="blog-smart-shopping.html" class="article-card">
+                    <div class="article-card-image cat-budgeting">
+                        <span class="article-card-category">Tips</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Smart Shopping Tips</h3>
+                        <p class="article-card-excerpt">Save money on everyday purchases.</p>
+                        <span class="article-card-meta">10 min read</span>
+                    </div>
+                </a>
+                <a href="blog-cost-of-living-lagos.html" class="article-card">
+                    <div class="article-card-image cat-budgeting">
+                        <span class="article-card-category">Lagos</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Cost of Living in Lagos</h3>
+                        <p class="article-card-excerpt">Complete breakdown of Lagos expenses.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Retirement Section -->
+    <section class="section" id="retirement">
+        <div class="container">
+            <h2 class="section-title">🎯 Retirement & Estate Planning</h2>
+            <div class="article-grid">
+                <a href="blog-pension-retirement.html" class="article-card">
+                    <div class="article-card-image cat-retirement">
+                        <span class="article-card-category">Pension</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Pension & Retirement Planning</h3>
+                        <p class="article-card-excerpt">Understanding your pension and PFA options.</p>
+                        <span class="article-card-meta">12 min read</span>
+                    </div>
+                </a>
+                <a href="blog-pfa-pension-transfer.html" class="article-card">
+                    <div class="article-card-image cat-retirement">
+                        <span class="article-card-category">PFA</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">PFA Transfer Guide</h3>
+                        <p class="article-card-excerpt">How to switch pension fund administrators.</p>
+                        <span class="article-card-meta">11 min read</span>
+                    </div>
+                </a>
+                <a href="blog-retirement-planning-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-retirement">
+                        <span class="article-card-category">Planning</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Retirement Planning Guide</h3>
+                        <p class="article-card-excerpt">Plan for a comfortable retirement.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+                <a href="blog-estate-planning-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-retirement">
+                        <span class="article-card-category">Estate</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Estate Planning Guide</h3>
+                        <p class="article-card-excerpt">Wills, trusts, and inheritance in Nigeria.</p>
+                        <span class="article-card-meta">15 min read</span>
+                    </div>
+                </a>
+                <a href="blog-first-time-home-buyer.html" class="article-card">
+                    <div class="article-card-image cat-retirement">
+                        <span class="article-card-category">Home</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">First-Time Home Buyer Guide</h3>
+                        <p class="article-card-excerpt">Complete guide to buying your first home.</p>
+                        <span class="article-card-meta">16 min read</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section -->
+    <section class="section" style="background: var(--white);" id="business">
+        <div class="container">
+            <h2 class="section-title">💼 Business & Income</h2>
+            <div class="article-grid">
                 <a href="blog-side-hustles.html" class="article-card">
                     <div class="article-card-image cat-business">
                         <span class="article-card-category">Income</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
                     </div>
                     <div class="article-card-body">
                         <h3 class="article-card-title">15 Side Hustles in Nigeria</h3>
@@ -539,11 +972,19 @@
                         <span class="article-card-meta">14 min read</span>
                     </div>
                 </a>
-                
+                <a href="blog-side-hustles-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-business">
+                        <span class="article-card-category">Income</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Best Side Hustles 2025</h3>
+                        <p class="article-card-excerpt">Top income opportunities this year.</p>
+                        <span class="article-card-meta">15 min read</span>
+                    </div>
+                </a>
                 <a href="blog-small-business.html" class="article-card">
                     <div class="article-card-image cat-business">
                         <span class="article-card-category">Business</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M3 10h18M5 6l7-3 7 3"/></svg>
                     </div>
                     <div class="article-card-body">
                         <h3 class="article-card-title">Starting a Small Business</h3>
@@ -551,16 +992,147 @@
                         <span class="article-card-meta">15 min read</span>
                     </div>
                 </a>
-                
-                <a href="blog-pension-retirement.html" class="article-card">
-                    <div class="article-card-image cat-budgeting">
-                        <span class="article-card-category">Retirement</span>
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <a href="blog-freelancing-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-business">
+                        <span class="article-card-category">Freelance</span>
                     </div>
                     <div class="article-card-body">
-                        <h3 class="article-card-title">Pension & Retirement Planning</h3>
-                        <p class="article-card-excerpt">Understanding your pension and PFA options.</p>
+                        <h3 class="article-card-title">Freelancing in Nigeria</h3>
+                        <p class="article-card-excerpt">Make money online as a freelancer.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+                <a href="blog-pos-business-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-business">
+                        <span class="article-card-category">POS</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">POS Business Guide</h3>
+                        <p class="article-card-excerpt">Start a profitable POS business.</p>
+                        <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-sme-financing-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-business">
+                        <span class="article-card-category">SME</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">SME Financing Options</h3>
+                        <p class="article-card-excerpt">Funding options for small businesses.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+                <a href="blog-ecommerce-business-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-business">
+                        <span class="article-card-category">E-commerce</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">E-commerce Business Guide</h3>
+                        <p class="article-card-excerpt">Start selling online in Nigeria.</p>
+                        <span class="article-card-meta">15 min read</span>
+                    </div>
+                </a>
+                <a href="blog-salary-negotiation.html" class="article-card">
+                    <div class="article-card-image cat-business">
+                        <span class="article-card-category">Career</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Salary Negotiation Tips</h3>
+                        <p class="article-card-excerpt">Get paid what you deserve.</p>
                         <span class="article-card-meta">12 min read</span>
+                    </div>
+                </a>
+                <a href="blog-school-fees-payment.html" class="article-card">
+                    <div class="article-card-image cat-business">
+                        <span class="article-card-category">Education</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">School Fees Payment Guide</h3>
+                        <p class="article-card-excerpt">Plan and pay for education expenses.</p>
+                        <span class="article-card-meta">11 min read</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ad Slot -->
+    <div class="ad-container">
+        <div class="container">
+            <div class="ad-label">Advertisement</div>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-3212022468120924"
+                 data-ad-slot="9057164066"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+    </div>
+
+    <!-- Financial Literacy & Economy Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">📚 Financial Literacy & Economy</h2>
+            <div class="article-grid">
+                <a href="blog-financial-literacy-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-budgeting">
+                        <span class="article-card-category">Education</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Financial Literacy Guide</h3>
+                        <p class="article-card-excerpt">Essential money skills for Nigerians.</p>
+                        <span class="article-card-meta">14 min read</span>
+                    </div>
+                </a>
+                <a href="blog-naira-devaluation.html" class="article-card">
+                    <div class="article-card-image cat-investing">
+                        <span class="article-card-category">Economy</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Naira Devaluation Guide</h3>
+                        <p class="article-card-excerpt">Protect your money from currency decline.</p>
+                        <span class="article-card-meta">13 min read</span>
+                    </div>
+                </a>
+                <a href="blog-nigerian-economy-2025.html" class="article-card">
+                    <div class="article-card-image cat-investing">
+                        <span class="article-card-category">Economy</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Nigerian Economy 2025</h3>
+                        <p class="article-card-excerpt">Economic outlook and opportunities.</p>
+                        <span class="article-card-meta">15 min read</span>
+                    </div>
+                </a>
+                <a href="blog-electricity-tariff.html" class="article-card">
+                    <div class="article-card-image cat-budgeting">
+                        <span class="article-card-category">Utilities</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Electricity Tariff Guide</h3>
+                        <p class="article-card-excerpt">Understanding Band A, B, C tariffs.</p>
+                        <span class="article-card-meta">11 min read</span>
+                    </div>
+                </a>
+                <a href="blog-online-scams.html" class="article-card">
+                    <div class="article-card-image cat-security">
+                        <span class="article-card-category">Security</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Online Scams to Avoid</h3>
+                        <p class="article-card-excerpt">Protect yourself from fraud.</p>
+                        <span class="article-card-meta">12 min read</span>
+                    </div>
+                </a>
+                <a href="blog-investment-scams-nigeria.html" class="article-card">
+                    <div class="article-card-image cat-security">
+                        <span class="article-card-category">Security</span>
+                    </div>
+                    <div class="article-card-body">
+                        <h3 class="article-card-title">Investment Scams to Avoid</h3>
+                        <p class="article-card-excerpt">Identify and avoid Ponzi schemes.</p>
+                        <span class="article-card-meta">13 min read</span>
                     </div>
                 </a>
             </div>
