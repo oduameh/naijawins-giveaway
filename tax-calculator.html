@@ -237,7 +237,11 @@
         }
         
         @media (max-width: 900px) {
-            .calculator-grid { grid-template-columns: 1fr; }
+            .calculator-section { padding: 30px 0; }
+            .calculator-grid { 
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
         }
         
         /* Category Selector */
@@ -248,6 +252,37 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             position: sticky;
             top: 100px;
+        }
+        
+        /* Mobile: Horizontal scrolling category selector */
+        @media (max-width: 900px) {
+            .category-selector {
+                position: relative;
+                top: 0;
+                padding: 16px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            .category-selector::-webkit-scrollbar { display: none; }
+            .category-selector h3 { display: none; }
+            .category-selector .category-buttons {
+                display: flex;
+                gap: 12px;
+                min-width: max-content;
+            }
+            .category-btn {
+                flex: 0 0 auto;
+                width: auto;
+                min-width: 140px;
+                padding: 12px 16px;
+                margin-bottom: 0;
+                text-align: center;
+            }
+            .category-btn .icon { margin-bottom: 4px; font-size: 1.25rem; }
+            .category-btn .title { font-size: 0.8125rem; }
+            .category-btn .desc { display: none; }
         }
         
         .category-selector h3 {
@@ -302,6 +337,14 @@
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 4px 30px rgba(0,0,0,0.08);
+        }
+        
+        @media (max-width: 600px) {
+            .calculator-panel {
+                padding: 24px 16px;
+                border-radius: 16px;
+            }
+            .panel-header h2 { font-size: 1.25rem; }
         }
         
         .panel-header {
@@ -491,7 +534,13 @@
         }
         
         @media (max-width: 600px) {
-            .results-grid { grid-template-columns: 1fr; }
+            .results-grid { 
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .results-header .total-tax { font-size: 2.25rem; }
+            .result-card { padding: 16px; }
+            .result-card .value { font-size: 1.125rem; }
         }
         
         .result-card {
@@ -586,6 +635,13 @@
             border-bottom: 1px solid var(--border);
         }
         
+        @media (max-width: 600px) {
+            .tax-table { font-size: 0.8125rem; }
+            .tax-table th, .tax-table td { padding: 10px 8px; }
+            .info-card { padding: 20px 16px; }
+            .info-card h3 { font-size: 1.1rem; }
+        }
+        
         .tax-table th {
             background: var(--bg);
             font-weight: 600;
@@ -617,7 +673,12 @@
         }
         
         @media (max-width: 700px) {
-            .changes-grid { grid-template-columns: 1fr; }
+            .changes-grid { 
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .change-item { padding: 16px; }
+            .change-icon { width: 40px; height: 40px; font-size: 1.25rem; }
         }
         
         .change-item {
@@ -794,36 +855,37 @@
                 <!-- Category Selector -->
                 <aside class="category-selector">
                     <h3>I am a...</h3>
-                    
-                    <button class="category-btn active" data-category="employee">
-                        <div class="icon">👨‍💼</div>
-                        <div class="title">Employed Individual</div>
-                        <div class="desc">PAYE salary earner</div>
-                    </button>
-                    
-                    <button class="category-btn" data-category="self-employed">
-                        <div class="icon">👩‍💻</div>
-                        <div class="title">Self-Employed / Freelancer</div>
-                        <div class="desc">Independent contractor</div>
-                    </button>
-                    
-                    <button class="category-btn" data-category="small-business">
-                        <div class="icon">🏪</div>
-                        <div class="title">Small Business</div>
-                        <div class="desc">Turnover ≤ ₦100M</div>
-                    </button>
-                    
-                    <button class="category-btn" data-category="medium-business">
-                        <div class="icon">🏢</div>
-                        <div class="title">Medium Company</div>
-                        <div class="desc">Turnover ₦100M - ₦500M</div>
-                    </button>
-                    
-                    <button class="category-btn" data-category="large-business">
-                        <div class="icon">🏛️</div>
-                        <div class="title">Large Enterprise</div>
-                        <div class="desc">Turnover > ₦500M</div>
-                    </button>
+                    <div class="category-buttons">
+                        <button class="category-btn active" data-category="employee">
+                            <div class="icon">👨‍💼</div>
+                            <div class="title">Employed</div>
+                            <div class="desc">PAYE salary earner</div>
+                        </button>
+                        
+                        <button class="category-btn" data-category="self-employed">
+                            <div class="icon">👩‍💻</div>
+                            <div class="title">Self-Employed</div>
+                            <div class="desc">Freelancer / Contractor</div>
+                        </button>
+                        
+                        <button class="category-btn" data-category="small-business">
+                            <div class="icon">🏪</div>
+                            <div class="title">Small Biz</div>
+                            <div class="desc">Turnover ≤ ₦100M</div>
+                        </button>
+                        
+                        <button class="category-btn" data-category="medium-business">
+                            <div class="icon">🏢</div>
+                            <div class="title">Medium Co.</div>
+                            <div class="desc">₦100M - ₦500M</div>
+                        </button>
+                        
+                        <button class="category-btn" data-category="large-business">
+                            <div class="icon">🏛️</div>
+                            <div class="title">Enterprise</div>
+                            <div class="desc">Turnover > ₦500M</div>
+                        </button>
+                    </div>
                 </aside>
 
                 <!-- Calculator Panel -->
