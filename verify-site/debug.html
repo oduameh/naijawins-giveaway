@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok Pixel Debug | NaijaWins</title>
+    
+    <!-- TikTok Pixel Code Start -->
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+      var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+      ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+      ttq.load('D5R6QG3C77U4AEKFAUBG');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
+    <!-- TikTok Pixel Code End -->
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container { max-width: 800px; margin: 0 auto; }
+        h1 { color: #00d4ff; margin-bottom: 20px; }
+        .card {
+            background: #16213e;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #0f3460;
+        }
+        .card h2 { color: #00d4ff; font-size: 18px; margin-bottom: 15px; }
+        .status { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .dot.green { background: #10b981; }
+        .dot.red { background: #ef4444; }
+        .dot.yellow { background: #f59e0b; }
+        .info { font-family: monospace; background: #0f3460; padding: 10px; border-radius: 6px; margin-top: 10px; font-size: 13px; overflow-x: auto; }
+        .btn {
+            background: #00d4ff;
+            color: #1a1a2e;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+        .btn:hover { background: #00b8e6; }
+        .log { background: #0a0a15; padding: 15px; border-radius: 8px; max-height: 300px; overflow-y: auto; font-family: monospace; font-size: 12px; }
+        .log-entry { padding: 5px 0; border-bottom: 1px solid #1a1a2e; }
+        .log-entry.success { color: #10b981; }
+        .log-entry.error { color: #ef4444; }
+        .log-entry.info { color: #60a5fa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TikTok Pixel Debugger</h1>
+        
+        <div class="card">
+            <h2>Pixel Status</h2>
+            <div class="status">
+                <div class="dot" id="pixelDot"></div>
+                <span id="pixelStatus">Checking...</span>
+            </div>
+            <div class="info" id="pixelInfo"></div>
+        </div>
+        
+        <div class="card">
+            <h2>Network Requests</h2>
+            <div class="status">
+                <div class="dot" id="networkDot"></div>
+                <span id="networkStatus">Checking...</span>
+            </div>
+            <div class="info" id="networkInfo"></div>
+        </div>
+        
+        <div class="card">
+            <h2>Test Events</h2>
+            <p style="margin-bottom: 15px; color: #aaa;">Click to fire test events and check if they're sent to TikTok:</p>
+            <button class="btn" onclick="firePageView()">Fire PageView</button>
+            <button class="btn" onclick="fireClickButton()">Fire ClickButton</button>
+            <button class="btn" onclick="fireCompleteRegistration()">Fire CompleteRegistration</button>
+        </div>
+        
+        <div class="card">
+            <h2>Debug Log</h2>
+            <div class="log" id="debugLog"></div>
+        </div>
+        
+        <div class="card">
+            <h2>Page Info</h2>
+            <div class="info" id="pageInfo"></div>
+        </div>
+    </div>
+    
+    <script>
+        const log = [];
+        const logContainer = document.getElementById('debugLog');
+        
+        function addLog(message, type = 'info') {
+            const time = new Date().toLocaleTimeString();
+            log.push({ time, message, type });
+            const entry = document.createElement('div');
+            entry.className = `log-entry ${type}`;
+            entry.textContent = `[${time}] ${message}`;
+            logContainer.appendChild(entry);
+            logContainer.scrollTop = logContainer.scrollHeight;
+        }
+        
+        // Check pixel
+        function checkPixel() {
+            const pixelDot = document.getElementById('pixelDot');
+            const pixelStatus = document.getElementById('pixelStatus');
+            const pixelInfo = document.getElementById('pixelInfo');
+            
+            if (window.ttq) {
+                pixelDot.className = 'dot green';
+                pixelStatus.textContent = 'TikTok Pixel Object Found';
+                addLog('ttq object exists on window', 'success');
+                
+                let info = `ttq object: ${typeof window.ttq}\n`;
+                info += `ttq methods: ${window.ttq.methods ? window.ttq.methods.join(', ') : 'N/A'}\n`;
+                info += `Pixel IDs loaded: ${window.ttq._i ? Object.keys(window.ttq._i).join(', ') : 'None'}`;
+                pixelInfo.textContent = info;
+                
+                if (window.ttq._i && Object.keys(window.ttq._i).length > 0) {
+                    addLog(`Pixel ID: ${Object.keys(window.ttq._i).join(', ')}`, 'success');
+                }
+            } else {
+                pixelDot.className = 'dot red';
+                pixelStatus.textContent = 'TikTok Pixel NOT Found';
+                pixelInfo.textContent = 'The ttq object is not available on window';
+                addLog('ttq object NOT found on window', 'error');
+            }
+        }
+        
+        // Check network
+        function checkNetwork() {
+            const networkDot = document.getElementById('networkDot');
+            const networkStatus = document.getElementById('networkStatus');
+            const networkInfo = document.getElementById('networkInfo');
+            
+            // Check for TikTok script
+            const scripts = document.querySelectorAll('script');
+            let tiktokScriptFound = false;
+            let scriptSrc = '';
+            
+            scripts.forEach(script => {
+                if (script.src && script.src.includes('analytics.tiktok.com')) {
+                    tiktokScriptFound = true;
+                    scriptSrc = script.src;
+                }
+            });
+            
+            if (tiktokScriptFound) {
+                networkDot.className = 'dot green';
+                networkStatus.textContent = 'TikTok Script Loaded';
+                networkInfo.textContent = `Script URL: ${scriptSrc}`;
+                addLog('TikTok analytics script found in DOM', 'success');
+            } else {
+                networkDot.className = 'dot yellow';
+                networkStatus.textContent = 'Checking...';
+                networkInfo.textContent = 'TikTok script may still be loading...';
+                addLog('TikTok script not yet found, may still be loading', 'info');
+                
+                setTimeout(() => {
+                    const scripts2 = document.querySelectorAll('script');
+                    let found = false;
+                    scripts2.forEach(script => {
+                        if (script.src && script.src.includes('analytics.tiktok.com')) {
+                            found = true;
+                            networkDot.className = 'dot green';
+                            networkStatus.textContent = 'TikTok Script Loaded';
+                            networkInfo.textContent = `Script URL: ${script.src}`;
+                            addLog('TikTok analytics script loaded after delay', 'success');
+                        }
+                    });
+                    if (!found) {
+                        networkDot.className = 'dot red';
+                        networkStatus.textContent = 'Script Not Found';
+                        addLog('TikTok script failed to load', 'error');
+                    }
+                }, 2000);
+            }
+        }
+        
+        // Page info
+        function showPageInfo() {
+            const pageInfo = document.getElementById('pageInfo');
+            let info = `URL: ${window.location.href}\n`;
+            info += `User Agent: ${navigator.userAgent}\n`;
+            info += `Cookies Enabled: ${navigator.cookieEnabled}\n`;
+            info += `Protocol: ${window.location.protocol}\n`;
+            info += `Referrer: ${document.referrer || 'None'}`;
+            pageInfo.textContent = info;
+        }
+        
+        // Test events
+        function firePageView() {
+            if (window.ttq) {
+                ttq.page();
+                addLog('Fired ttq.page() event', 'success');
+            } else {
+                addLog('Cannot fire event - ttq not available', 'error');
+            }
+        }
+        
+        function fireClickButton() {
+            if (window.ttq) {
+                ttq.track('ClickButton');
+                addLog('Fired ttq.track("ClickButton") event', 'success');
+            } else {
+                addLog('Cannot fire event - ttq not available', 'error');
+            }
+        }
+        
+        function fireCompleteRegistration() {
+            if (window.ttq) {
+                ttq.track('CompleteRegistration');
+                addLog('Fired ttq.track("CompleteRegistration") event', 'success');
+            } else {
+                addLog('Cannot fire event - ttq not available', 'error');
+            }
+        }
+        
+        // Run checks
+        addLog('Debug page loaded', 'info');
+        setTimeout(() => {
+            checkPixel();
+            checkNetwork();
+            showPageInfo();
+        }, 1000);
+    </script>
+</body>
+</html>
