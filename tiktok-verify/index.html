@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify | NaijaWins</title>
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        :root {
+            --primary: #0F172A;
+            --secondary: #1E293B;
+            --accent: #0EA5E9;
+            --accent-dark: #0284C7;
+            --text: #334155;
+            --text-light: #64748B;
+            --border: #E2E8F0;
+            --bg: #F8FAFC;
+            --white: #FFFFFF;
+            --success: #10B981;
+            --success-dark: #059669;
+            --danger: #EF4444;
+            --danger-dark: #DC2626;
+        }
+        
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .verify-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 48px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--primary);
+            margin-bottom: 32px;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        .verify-title {
+            font-family: 'Merriweather', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+        
+        .verify-description {
+            color: var(--text-light);
+            font-size: 16px;
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 48px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            min-width: 140px;
+        }
+        
+        .btn-yes {
+            background: var(--success);
+            color: var(--white);
+        }
+        
+        .btn-yes:hover {
+            background: var(--success-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+        }
+        
+        .btn-no {
+            background: var(--danger);
+            color: var(--white);
+        }
+        
+        .btn-no:hover {
+            background: var(--danger-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.4);
+        }
+        
+        .footer-text {
+            margin-top: 32px;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .footer-text a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 480px) {
+            .verify-card {
+                padding: 32px 24px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="verify-card">
+        <div class="logo">Naija<span>Wins</span></div>
+        
+        <h1 class="verify-title">Verification</h1>
+        <p class="verify-description">
+            Please confirm your selection below.
+        </p>
+        
+        <div class="button-group">
+            <!-- UPDATE THESE URLs -->
+            <a href="https://example.com/yes" class="btn btn-yes">Yes</a>
+            <a href="https://example.com/no" class="btn btn-no">No</a>
+        </div>
+        
+    </div>
+</body>
+</html>
