@@ -25,3 +25,6 @@ AD_ARBITRAGE_STRATEGY.md
 MAINTENANCE_GUIDE.md
 *_GUIDE.md
 *_INTERNAL.md
+
+# Local Netlify folder
+.netlify
